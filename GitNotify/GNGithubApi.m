@@ -53,14 +53,11 @@
     //Create the url
     NSString *head = BASE_URL;
     NSString *partialUrl = [NSString stringWithFormat:LIST_REPO_FORMAT, username];
-    NSString *url = [head stringByAppendingString:partialUrl];
+    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
     
     if (DEBUG_TEST) {
         NSLog(@"GNGithubApi.getUserRepos: %@", url);
     }
-    
-    //array holding 
-    NSMutableArray *repositories = [NSMutableArray array];
     
     //MAke network request
     NSString *data = [net getRequest:url];
@@ -89,7 +86,7 @@
     //Create the url
     NSString *head = BASE_URL;
     NSString *partialUrl = [NSString stringWithFormat:LIST_WATCHED_REPO_FORMAT, username];
-    NSString *url = [head stringByAppendingString:partialUrl];
+    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
     
     if (DEBUG_TEST) {
         NSLog(@"GNGithubAPI.getWatchedRepos: %@", url);

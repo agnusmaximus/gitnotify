@@ -9,6 +9,9 @@
 #ifndef GitNotify_APIConstants_h
 #define GitNotify_APIConstants_h
 
+//Access token
+#define ACCESS_TOKEN @"?access_token=053e635b489343e76bcf06dfc44768fa9e2febae"
+
 //Base url for github api
 #define BASE_URL @"https://api.github.com/"
 
