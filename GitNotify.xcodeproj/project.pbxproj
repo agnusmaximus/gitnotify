@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE157179E31E40095B957 /* UIKit.framework */; };
+		AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE159179E31E40095B957 /* Foundation.framework */; };
+		AFBBE15C179E31E40095B957 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE15B179E31E40095B957 /* CoreGraphics.framework */; };
+		AFBBE162179E31E40095B957 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE160179E31E40095B957 /* InfoPlist.strings */; };
+		AFBBE164179E31E40095B957 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE163179E31E40095B957 /* main.m */; };
+		AFBBE168179E31E40095B957 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE167179E31E40095B957 /* AppDelegate.m */; };
+		AFBBE16A179E31E40095B957 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE169179E31E40095B957 /* Default.png */; };
+		AFBBE16C179E31E40095B957 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE16B179E31E40095B957 /* Default@2x.png */; };
+		AFBBE16E179E31E40095B957 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE16D179E31E40095B957 /* Default-568h@2x.png */; };
+		AFBBE176179E31E50095B957 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE175179E31E50095B957 /* SenTestingKit.framework */; };
+		AFBBE177179E31E50095B957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE157179E31E40095B957 /* UIKit.framework */; };
+		AFBBE178179E31E50095B957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE159179E31E40095B957 /* Foundation.framework */; };
+		AFBBE180179E31E50095B957 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE17E179E31E50095B957 /* InfoPlist.strings */; };
+		AFBBE183179E31E50095B957 /* GitNotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE182179E31E50095B957 /* GitNotifyTests.m */; };
+		AFBBE18F179E36CF0095B957 /* GNGithubApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE18E179E36CF0095B957 /* GNGithubApi.m */; };
+		AFBBE193179E38060095B957 /* GNNetworkCalls.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE192179E38060095B957 /* GNNetworkCalls.m */; };
+		AFBBE1AB179E40CF0095B957 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE198179E40CF0095B957 /* SBJsonParser.m */; };
+		AFBBE1AC179E40CF0095B957 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE198179E40CF0095B957 /* SBJsonParser.m */; };
+		AFBBE1AD179E40CF0095B957 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19A179E40CF0095B957 /* SBJsonStreamParser.m */; };
+		AFBBE1AE179E40CF0095B957 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19A179E40CF0095B957 /* SBJsonStreamParser.m */; };
+		AFBBE1AF179E40CF0095B957 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19C179E40CF0095B957 /* SBJsonStreamParserAccumulator.m */; };
+		AFBBE1B0179E40CF0095B957 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19C179E40CF0095B957 /* SBJsonStreamParserAccumulator.m */; };
+		AFBBE1B1179E40CF0095B957 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19E179E40CF0095B957 /* SBJsonStreamParserAdapter.m */; };
+		AFBBE1B2179E40CF0095B957 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE19E179E40CF0095B957 /* SBJsonStreamParserAdapter.m */; };
+		AFBBE1B3179E40CF0095B957 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A0179E40CF0095B957 /* SBJsonStreamParserState.m */; };
+		AFBBE1B4179E40CF0095B957 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A0179E40CF0095B957 /* SBJsonStreamParserState.m */; };
+		AFBBE1B5179E40CF0095B957 /* SBJsonStreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A2179E40CF0095B957 /* SBJsonStreamTokeniser.m */; };
+		AFBBE1B6179E40CF0095B957 /* SBJsonStreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A2179E40CF0095B957 /* SBJsonStreamTokeniser.m */; };
+		AFBBE1B7179E40CF0095B957 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A4179E40CF0095B957 /* SBJsonStreamWriter.m */; };
+		AFBBE1B8179E40CF0095B957 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A4179E40CF0095B957 /* SBJsonStreamWriter.m */; };
+		AFBBE1B9179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A6179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m */; };
+		AFBBE1BA179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A6179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m */; };
+		AFBBE1BB179E40CF0095B957 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A8179E40CF0095B957 /* SBJsonStreamWriterState.m */; };
+		AFBBE1BC179E40CF0095B957 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1A8179E40CF0095B957 /* SBJsonStreamWriterState.m */; };
+		AFBBE1BD179E40CF0095B957 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1AA179E40CF0095B957 /* SBJsonWriter.m */; };
+		AFBBE1BE179E40CF0095B957 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1AA179E40CF0095B957 /* SBJsonWriter.m */; };
+		AFBBE1C2179E43A20095B957 /* GNRepoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1C0179E43A20095B957 /* GNRepoVC.m */; };
+		AFBBE1C3179E43A20095B957 /* GNRepoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1C0179E43A20095B957 /* GNRepoVC.m */; };
+		AFBBE1C4179E43A20095B957 /* GNRepoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1C1179E43A20095B957 /* GNRepoVC.xib */; };
+		AFBBE1C5179E43A20095B957 /* GNRepoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1C1179E43A20095B957 /* GNRepoVC.xib */; };
+		AFBBE1D1179E45920095B957 /* GNRepoTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1CF179E45920095B957 /* GNRepoTableVC.m */; };
+		AFBBE1D2179E45920095B957 /* GNRepoTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1CF179E45920095B957 /* GNRepoTableVC.m */; };
+		AFBBE1D3179E45920095B957 /* GNRepoTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1D0179E45920095B957 /* GNRepoTableVC.xib */; };
+		AFBBE1D4179E45920095B957 /* GNRepoTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1D0179E45920095B957 /* GNRepoTableVC.xib */; };
+		AFBBE1D8179E48190095B957 /* GNRepoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */; };
+		AFBBE1D9179E48190095B957 /* GNRepoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */; };
+		AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */; };
+		AFBBE1DC179E48270095B957 /* GNRepoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFBBE179179E31E50095B957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFBBE14C179E31E40095B957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFBBE153179E31E40095B957;
+			remoteInfo = GitNotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFBBE154179E31E40095B957 /* GitNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFBBE157179E31E40095B957 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFBBE159179E31E40095B957 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AFBBE15B179E31E40095B957 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AFBBE15F179E31E40095B957 /* GitNotify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitNotify-Info.plist"; sourceTree = "<group>"; };
+		AFBBE161179E31E40095B957 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFBBE163179E31E40095B957 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AFBBE165179E31E40095B957 /* GitNotify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitNotify-Prefix.pch"; sourceTree = "<group>"; };
+		AFBBE166179E31E40095B957 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AFBBE167179E31E40095B957 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFBBE169179E31E40095B957 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AFBBE16B179E31E40095B957 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AFBBE16D179E31E40095B957 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AFBBE174179E31E50095B957 /* GitNotifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitNotifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFBBE175179E31E50095B957 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		AFBBE17D179E31E50095B957 /* GitNotifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitNotifyTests-Info.plist"; sourceTree = "<group>"; };
+		AFBBE17F179E31E50095B957 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFBBE181179E31E50095B957 /* GitNotifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitNotifyTests.h; sourceTree = "<group>"; };
+		AFBBE182179E31E50095B957 /* GitNotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitNotifyTests.m; sourceTree = "<group>"; };
+		AFBBE18D179E36CF0095B957 /* GNGithubApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGithubApi.h; sourceTree = "<group>"; };
+		AFBBE18E179E36CF0095B957 /* GNGithubApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGithubApi.m; sourceTree = "<group>"; };
+		AFBBE190179E36ED0095B957 /* GNAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNAPIConstants.h; sourceTree = "<group>"; };
+		AFBBE191179E38060095B957 /* GNNetworkCalls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNNetworkCalls.h; sourceTree = "<group>"; };
+		AFBBE192179E38060095B957 /* GNNetworkCalls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNNetworkCalls.m; sourceTree = "<group>"; };
+		AFBBE194179E3CFE0095B957 /* GNGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNGlobals.h; sourceTree = "<group>"; };
+		AFBBE196179E40CF0095B957 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		AFBBE197179E40CF0095B957 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		AFBBE198179E40CF0095B957 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		AFBBE199179E40CF0095B957 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		AFBBE19A179E40CF0095B957 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		AFBBE19B179E40CF0095B957 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		AFBBE19C179E40CF0095B957 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		AFBBE19D179E40CF0095B957 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		AFBBE19E179E40CF0095B957 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		AFBBE19F179E40CF0095B957 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		AFBBE1A0179E40CF0095B957 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		AFBBE1A1179E40CF0095B957 /* SBJsonStreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamTokeniser.h; sourceTree = "<group>"; };
+		AFBBE1A2179E40CF0095B957 /* SBJsonStreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamTokeniser.m; sourceTree = "<group>"; };
+		AFBBE1A3179E40CF0095B957 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		AFBBE1A4179E40CF0095B957 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		AFBBE1A5179E40CF0095B957 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		AFBBE1A6179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		AFBBE1A7179E40CF0095B957 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		AFBBE1A8179E40CF0095B957 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		AFBBE1A9179E40CF0095B957 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		AFBBE1AA179E40CF0095B957 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		AFBBE1BF179E43A20095B957 /* GNRepoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoVC.h; sourceTree = "<group>"; };
+		AFBBE1C0179E43A20095B957 /* GNRepoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoVC.m; sourceTree = "<group>"; };
+		AFBBE1C1179E43A20095B957 /* GNRepoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoVC.xib; sourceTree = "<group>"; };
+		AFBBE1CE179E45920095B957 /* GNRepoTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableVC.h; sourceTree = "<group>"; };
+		AFBBE1CF179E45920095B957 /* GNRepoTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableVC.m; sourceTree = "<group>"; };
+		AFBBE1D0179E45920095B957 /* GNRepoTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableVC.xib; sourceTree = "<group>"; };
+		AFBBE1D6179E48190095B957 /* GNRepoTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableCell.h; sourceTree = "<group>"; };
+		AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableCell.m; sourceTree = "<group>"; };
+		AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFBBE151179E31E40095B957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */,
+				AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */,
+				AFBBE15C179E31E40095B957 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBBE170179E31E50095B957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE176179E31E50095B957 /* SenTestingKit.framework in Frameworks */,
+				AFBBE177179E31E50095B957 /* UIKit.framework in Frameworks */,
+				AFBBE178179E31E50095B957 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFBBE14B179E31E40095B957 = {
+			isa = PBXGroup;
+			children = (
+				AFBBE15D179E31E40095B957 /* GitNotify */,
+				AFBBE17B179E31E50095B957 /* GitNotifyTests */,
+				AFBBE156179E31E40095B957 /* Frameworks */,
+				AFBBE155179E31E40095B957 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFBBE155179E31E40095B957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE154179E31E40095B957 /* GitNotify.app */,
+				AFBBE174179E31E50095B957 /* GitNotifyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFBBE156179E31E40095B957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE157179E31E40095B957 /* UIKit.framework */,
+				AFBBE159179E31E40095B957 /* Foundation.framework */,
+				AFBBE15B179E31E40095B957 /* CoreGraphics.framework */,
+				AFBBE175179E31E50095B957 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFBBE15D179E31E40095B957 /* GitNotify */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE194179E3CFE0095B957 /* GNGlobals.h */,
+				AFBBE195179E40C20095B957 /* SBJson */,
+				AFBBE18C179E36A80095B957 /* Model */,
+				AFBBE166179E31E40095B957 /* AppDelegate.h */,
+				AFBBE167179E31E40095B957 /* AppDelegate.m */,
+				AFBBE1D5179E45B70095B957 /* GNRepo */,
+				AFBBE15E179E31E40095B957 /* Supporting Files */,
+			);
+			path = GitNotify;
+			sourceTree = "<group>";
+		};
+		AFBBE15E179E31E40095B957 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE15F179E31E40095B957 /* GitNotify-Info.plist */,
+				AFBBE160179E31E40095B957 /* InfoPlist.strings */,
+				AFBBE163179E31E40095B957 /* main.m */,
+				AFBBE165179E31E40095B957 /* GitNotify-Prefix.pch */,
+				AFBBE169179E31E40095B957 /* Default.png */,
+				AFBBE16B179E31E40095B957 /* Default@2x.png */,
+				AFBBE16D179E31E40095B957 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFBBE17B179E31E50095B957 /* GitNotifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE181179E31E50095B957 /* GitNotifyTests.h */,
+				AFBBE182179E31E50095B957 /* GitNotifyTests.m */,
+				AFBBE17C179E31E50095B957 /* Supporting Files */,
+			);
+			path = GitNotifyTests;
+			sourceTree = "<group>";
+		};
+		AFBBE17C179E31E50095B957 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE17D179E31E50095B957 /* GitNotifyTests-Info.plist */,
+				AFBBE17E179E31E50095B957 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFBBE18C179E36A80095B957 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE191179E38060095B957 /* GNNetworkCalls.h */,
+				AFBBE192179E38060095B957 /* GNNetworkCalls.m */,
+				AFBBE190179E36ED0095B957 /* GNAPIConstants.h */,
+				AFBBE18D179E36CF0095B957 /* GNGithubApi.h */,
+				AFBBE18E179E36CF0095B957 /* GNGithubApi.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AFBBE195179E40C20095B957 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE196179E40CF0095B957 /* SBJson.h */,
+				AFBBE197179E40CF0095B957 /* SBJsonParser.h */,
+				AFBBE198179E40CF0095B957 /* SBJsonParser.m */,
+				AFBBE199179E40CF0095B957 /* SBJsonStreamParser.h */,
+				AFBBE19A179E40CF0095B957 /* SBJsonStreamParser.m */,
+				AFBBE19B179E40CF0095B957 /* SBJsonStreamParserAccumulator.h */,
+				AFBBE19C179E40CF0095B957 /* SBJsonStreamParserAccumulator.m */,
+				AFBBE19D179E40CF0095B957 /* SBJsonStreamParserAdapter.h */,
+				AFBBE19E179E40CF0095B957 /* SBJsonStreamParserAdapter.m */,
+				AFBBE19F179E40CF0095B957 /* SBJsonStreamParserState.h */,
+				AFBBE1A0179E40CF0095B957 /* SBJsonStreamParserState.m */,
+				AFBBE1A1179E40CF0095B957 /* SBJsonStreamTokeniser.h */,
+				AFBBE1A2179E40CF0095B957 /* SBJsonStreamTokeniser.m */,
+				AFBBE1A3179E40CF0095B957 /* SBJsonStreamWriter.h */,
+				AFBBE1A4179E40CF0095B957 /* SBJsonStreamWriter.m */,
+				AFBBE1A5179E40CF0095B957 /* SBJsonStreamWriterAccumulator.h */,
+				AFBBE1A6179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m */,
+				AFBBE1A7179E40CF0095B957 /* SBJsonStreamWriterState.h */,
+				AFBBE1A8179E40CF0095B957 /* SBJsonStreamWriterState.m */,
+				AFBBE1A9179E40CF0095B957 /* SBJsonWriter.h */,
+				AFBBE1AA179E40CF0095B957 /* SBJsonWriter.m */,
+			);
+			name = SBJson;
+			sourceTree = "<group>";
+		};
+		AFBBE1D5179E45B70095B957 /* GNRepo */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBE1BF179E43A20095B957 /* GNRepoVC.h */,
+				AFBBE1C0179E43A20095B957 /* GNRepoVC.m */,
+				AFBBE1C1179E43A20095B957 /* GNRepoVC.xib */,
+				AFBBE1CE179E45920095B957 /* GNRepoTableVC.h */,
+				AFBBE1CF179E45920095B957 /* GNRepoTableVC.m */,
+				AFBBE1D0179E45920095B957 /* GNRepoTableVC.xib */,
+				AFBBE1D6179E48190095B957 /* GNRepoTableCell.h */,
+				AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */,
+				AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */,
+			);
+			name = GNRepo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFBBE153179E31E40095B957 /* GitNotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFBBE186179E31E50095B957 /* Build configuration list for PBXNativeTarget "GitNotify" */;
+			buildPhases = (
+				AFBBE150179E31E40095B957 /* Sources */,
+				AFBBE151179E31E40095B957 /* Frameworks */,
+				AFBBE152179E31E40095B957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitNotify;
+			productName = GitNotify;
+			productReference = AFBBE154179E31E40095B957 /* GitNotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFBBE173179E31E50095B957 /* GitNotifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFBBE189179E31E50095B957 /* Build configuration list for PBXNativeTarget "GitNotifyTests" */;
+			buildPhases = (
+				AFBBE16F179E31E50095B957 /* Sources */,
+				AFBBE170179E31E50095B957 /* Frameworks */,
+				AFBBE171179E31E50095B957 /* Resources */,
+				AFBBE172179E31E50095B957 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFBBE17A179E31E50095B957 /* PBXTargetDependency */,
+			);
+			name = GitNotifyTests;
+			productName = GitNotifyTests;
+			productReference = AFBBE174179E31E50095B957 /* GitNotifyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFBBE14C179E31E40095B957 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Max Lam";
+			};
+			buildConfigurationList = AFBBE14F179E31E40095B957 /* Build configuration list for PBXProject "GitNotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AFBBE14B179E31E40095B957;
+			productRefGroup = AFBBE155179E31E40095B957 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFBBE153179E31E40095B957 /* GitNotify */,
+				AFBBE173179E31E50095B957 /* GitNotifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFBBE152179E31E40095B957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE162179E31E40095B957 /* InfoPlist.strings in Resources */,
+				AFBBE16A179E31E40095B957 /* Default.png in Resources */,
+				AFBBE16C179E31E40095B957 /* Default@2x.png in Resources */,
+				AFBBE16E179E31E40095B957 /* Default-568h@2x.png in Resources */,
+				AFBBE1C4179E43A20095B957 /* GNRepoVC.xib in Resources */,
+				AFBBE1D3179E45920095B957 /* GNRepoTableVC.xib in Resources */,
+				AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBBE171179E31E50095B957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE180179E31E50095B957 /* InfoPlist.strings in Resources */,
+				AFBBE1C5179E43A20095B957 /* GNRepoVC.xib in Resources */,
+				AFBBE1D4179E45920095B957 /* GNRepoTableVC.xib in Resources */,
+				AFBBE1DC179E48270095B957 /* GNRepoTableCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFBBE172179E31E50095B957 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFBBE150179E31E40095B957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE164179E31E40095B957 /* main.m in Sources */,
+				AFBBE168179E31E40095B957 /* AppDelegate.m in Sources */,
+				AFBBE18F179E36CF0095B957 /* GNGithubApi.m in Sources */,
+				AFBBE193179E38060095B957 /* GNNetworkCalls.m in Sources */,
+				AFBBE1AB179E40CF0095B957 /* SBJsonParser.m in Sources */,
+				AFBBE1AD179E40CF0095B957 /* SBJsonStreamParser.m in Sources */,
+				AFBBE1AF179E40CF0095B957 /* SBJsonStreamParserAccumulator.m in Sources */,
+				AFBBE1B1179E40CF0095B957 /* SBJsonStreamParserAdapter.m in Sources */,
+				AFBBE1B3179E40CF0095B957 /* SBJsonStreamParserState.m in Sources */,
+				AFBBE1B5179E40CF0095B957 /* SBJsonStreamTokeniser.m in Sources */,
+				AFBBE1B7179E40CF0095B957 /* SBJsonStreamWriter.m in Sources */,
+				AFBBE1B9179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				AFBBE1BB179E40CF0095B957 /* SBJsonStreamWriterState.m in Sources */,
+				AFBBE1BD179E40CF0095B957 /* SBJsonWriter.m in Sources */,
+				AFBBE1C2179E43A20095B957 /* GNRepoVC.m in Sources */,
+				AFBBE1D1179E45920095B957 /* GNRepoTableVC.m in Sources */,
+				AFBBE1D8179E48190095B957 /* GNRepoTableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBBE16F179E31E50095B957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFBBE183179E31E50095B957 /* GitNotifyTests.m in Sources */,
+				AFBBE1AC179E40CF0095B957 /* SBJsonParser.m in Sources */,
+				AFBBE1AE179E40CF0095B957 /* SBJsonStreamParser.m in Sources */,
+				AFBBE1B0179E40CF0095B957 /* SBJsonStreamParserAccumulator.m in Sources */,
+				AFBBE1B2179E40CF0095B957 /* SBJsonStreamParserAdapter.m in Sources */,
+				AFBBE1B4179E40CF0095B957 /* SBJsonStreamParserState.m in Sources */,
+				AFBBE1B6179E40CF0095B957 /* SBJsonStreamTokeniser.m in Sources */,
+				AFBBE1B8179E40CF0095B957 /* SBJsonStreamWriter.m in Sources */,
+				AFBBE1BA179E40CF0095B957 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				AFBBE1BC179E40CF0095B957 /* SBJsonStreamWriterState.m in Sources */,
+				AFBBE1BE179E40CF0095B957 /* SBJsonWriter.m in Sources */,
+				AFBBE1C3179E43A20095B957 /* GNRepoVC.m in Sources */,
+				AFBBE1D2179E45920095B957 /* GNRepoTableVC.m in Sources */,
+				AFBBE1D9179E48190095B957 /* GNRepoTableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFBBE17A179E31E50095B957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFBBE153179E31E40095B957 /* GitNotify */;
+			targetProxy = AFBBE179179E31E50095B957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFBBE160179E31E40095B957 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFBBE161179E31E40095B957 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AFBBE17E179E31E50095B957 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFBBE17F179E31E50095B957 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFBBE184179E31E50095B957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFBBE185179E31E50095B957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFBBE187179E31E50095B957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitNotify/GitNotify-Prefix.pch";
+				INFOPLIST_FILE = "GitNotify/GitNotify-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AFBBE188179E31E50095B957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitNotify/GitNotify-Prefix.pch";
+				INFOPLIST_FILE = "GitNotify/GitNotify-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AFBBE18A179E31E50095B957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitNotify.app/GitNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitNotify/GitNotify-Prefix.pch";
+				INFOPLIST_FILE = "GitNotifyTests/GitNotifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AFBBE18B179E31E50095B957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GitNotify.app/GitNotify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitNotify/GitNotify-Prefix.pch";
+				INFOPLIST_FILE = "GitNotifyTests/GitNotifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFBBE14F179E31E40095B957 /* Build configuration list for PBXProject "GitNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFBBE184179E31E50095B957 /* Debug */,
+				AFBBE185179E31E50095B957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFBBE186179E31E50095B957 /* Build configuration list for PBXNativeTarget "GitNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFBBE187179E31E50095B957 /* Debug */,
+				AFBBE188179E31E50095B957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AFBBE189179E31E50095B957 /* Build configuration list for PBXNativeTarget "GitNotifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFBBE18A179E31E50095B957 /* Debug */,
+				AFBBE18B179E31E50095B957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFBBE14C179E31E40095B957 /* Project object */;
+}
