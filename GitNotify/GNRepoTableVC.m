@@ -94,8 +94,27 @@
     return cell;
 }
 
+/* Method viewForHeaderInSection
+ * ----------------------------------
+ * custom header view 
+ */
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
+    //Load headerview from xib file
+    GNRepoTableHeader *headerView = [[[NSBundle mainBundle] loadNibNamed:@"GNRepoTableHeader"
+                                                                  owner:self
+                                                                options:nil] lastObject];
+    
+    //Set quartzcore layer properties
+    headerView.layer.borderColor = [[UIColor colorWithRed:.8 green:.8 blue:.8 alpha:1] CGColor];    
+    headerView.layer.borderWidth = 1;
+    headerView.layer.cornerRadius = 1;
+    headerView.layer.shadowOpacity = .3;
+    headerView.layer.shadowRadius = 2;
+    headerView.layer.shadowOffset = CGSizeMake(.2f, .2f);
+    headerView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    
+    return headerView;
 }
 
 #pragma mark - Table view delegate

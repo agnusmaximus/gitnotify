@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "GNGithubApi.h"
 #import "GNRepoTableCell.h"
+#import "GNRepoTableHeader.h"
 
 @interface GNRepoTableVC : UITableViewController
 

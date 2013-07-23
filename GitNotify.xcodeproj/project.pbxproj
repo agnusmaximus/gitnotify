@@ -55,6 +55,10 @@
 		AFBBE1D9179E48190095B957 /* GNRepoTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */; };
 		AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */; };
 		AFBBE1DC179E48270095B957 /* GNRepoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */; };
+		AFBBE1DF179E4CE30095B957 /* GNRepoTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */; };
+		AFBBE1E0179E4CE30095B957 /* GNRepoTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */; };
+		AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
+		AFBBE1E3179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,9 @@
 		AFBBE1D6179E48190095B957 /* GNRepoTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableCell.h; sourceTree = "<group>"; };
 		AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableCell.m; sourceTree = "<group>"; };
 		AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableCell.xib; sourceTree = "<group>"; };
+		AFBBE1DD179E4CE30095B957 /* GNRepoTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableHeader.h; sourceTree = "<group>"; };
+		AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableHeader.m; sourceTree = "<group>"; };
+		AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +285,9 @@
 				AFBBE1D6179E48190095B957 /* GNRepoTableCell.h */,
 				AFBBE1D7179E48190095B957 /* GNRepoTableCell.m */,
 				AFBBE1DA179E48270095B957 /* GNRepoTableCell.xib */,
+				AFBBE1DD179E4CE30095B957 /* GNRepoTableHeader.h */,
+				AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */,
+				AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */,
 			);
 			name = GNRepo;
 			sourceTree = "<group>";
@@ -360,6 +370,7 @@
 				AFBBE1C4179E43A20095B957 /* GNRepoVC.xib in Resources */,
 				AFBBE1D3179E45920095B957 /* GNRepoTableVC.xib in Resources */,
 				AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */,
+				AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +382,7 @@
 				AFBBE1C5179E43A20095B957 /* GNRepoVC.xib in Resources */,
 				AFBBE1D4179E45920095B957 /* GNRepoTableVC.xib in Resources */,
 				AFBBE1DC179E48270095B957 /* GNRepoTableCell.xib in Resources */,
+				AFBBE1E3179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +426,7 @@
 				AFBBE1C2179E43A20095B957 /* GNRepoVC.m in Sources */,
 				AFBBE1D1179E45920095B957 /* GNRepoTableVC.m in Sources */,
 				AFBBE1D8179E48190095B957 /* GNRepoTableCell.m in Sources */,
+				AFBBE1DF179E4CE30095B957 /* GNRepoTableHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +448,7 @@
 				AFBBE1C3179E43A20095B957 /* GNRepoVC.m in Sources */,
 				AFBBE1D2179E45920095B957 /* GNRepoTableVC.m in Sources */,
 				AFBBE1D9179E48190095B957 /* GNRepoTableCell.m in Sources */,
+				AFBBE1E0179E4CE30095B957 /* GNRepoTableHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
