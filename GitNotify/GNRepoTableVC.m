@@ -24,12 +24,12 @@
     [super viewDidLoad];
     
     //Load data
-    self.repos = [[GNGithubApi sharedGitAPI] getUserRepos:@"agnusmaximus"];
+    self.watched = [[GNGithubApi sharedGitAPI] getWatchedRepos:@"agnusmaximus"];
     
     //Extract repository names
     self.repoNames = [NSMutableArray array];
-    
-    for (NSDictionary *dict in self.repos) {
+
+    for (NSDictionary *dict in self.watched) {
         [self.repoNames addObject:[dict objectForKey:@"name"]];
     }
     

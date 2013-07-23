@@ -18,5 +18,6 @@
 +(GNGithubApi *)sharedGitAPI;
 
 -(NSDictionary *)getUserRepos:(NSString *)username;
+-(NSDictionary *)getWatchedRepos:(NSString *)username;
 
 @end

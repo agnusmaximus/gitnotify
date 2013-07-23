@@ -14,7 +14,7 @@
 
 @interface GNRepoTableVC : UITableViewController
 
-@property (nonatomic, strong) NSDictionary *repos;
+@property (nonatomic, strong) NSDictionary *watched;
 @property (nonatomic, strong) NSMutableArray *repoNames;
 
 @end

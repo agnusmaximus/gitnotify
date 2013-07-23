@@ -14,5 +14,6 @@
 
 //Formats for different API requests
 #define LIST_REPO_FORMAT @"users/%@/repos"
+#define LIST_WATCHED_REPO_FORMAT @"users/%@/subscriptions"
 
 #endif

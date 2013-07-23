@@ -76,4 +76,40 @@
     return json;
 }
 
+/* Method getWatchedRepos
+ * ----------------------------
+ * Uses github api to retrieve
+ * a mutable array of user's repositories
+ *
+ * @username - username of github member
+ * @return - array of user's repos
+ */
+-(NSDictionary *)getWatchedRepos:(NSString *)username {
+    
+    //Create the url
+    NSString *head = BASE_URL;
+    NSString *partialUrl = [NSString stringWithFormat:LIST_WATCHED_REPO_FORMAT, username];
+    NSString *url = [head stringByAppendingString:partialUrl];
+    
+    if (DEBUG_TEST) {
+        NSLog(@"GNGithubAPI.getWatchedRepos: %@", url);
+    }
+    
+    //array holding
+    NSMutableArray *repositories = [NSMutableArray array];
+    
+    //MAke network request
+    NSString *data = [net getRequest:url];
+    
+    //Parse json string
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *json = [parser objectWithString:data];
+    
+    if (DEBUG_TEST) {
+        NSLog(@"GNGithubAPI.getWatchedRepos: %@", json);
+    }
+    
+    return json;
+}
+
 @end
