@@ -90,6 +90,9 @@
     //Set repo name
     cell.repoName.text = [self.repoNames objectAtIndex:indexPath.row];
 
+    //Set background color
+    cell.contentView.backgroundColor = [UIColor whiteColor];
+    
     //Set selected background color
     UIView *selectedBGColor = [[UIView alloc] initWithFrame:self.view.frame];
     [selectedBGColor setBackgroundColor:[UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]];
