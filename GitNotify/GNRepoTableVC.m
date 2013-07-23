@@ -90,6 +90,10 @@
     //Set repo name
     cell.repoName.text = [self.repoNames objectAtIndex:indexPath.row];
 
+    //Set selected background color
+    UIView *selectedBGColor = [[UIView alloc] initWithFrame:self.view.frame];
+    [selectedBGColor setBackgroundColor:[UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1]];
+    cell.selectedBackgroundView = selectedBGColor;
     
     return cell;
 }
@@ -125,6 +129,7 @@
  * navigates to the notification view controller
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
