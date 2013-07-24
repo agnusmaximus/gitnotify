@@ -14,6 +14,19 @@
 
 @implementation GNRepoTableVC
 
+/* Method reversedArray
+ * ------------------------
+ * REturns reversed array
+ */
+-(NSMutableArray *)reversedArray:(NSMutableArray *)array {
+    NSMutableArray *results = [NSMutableArray array];
+    NSEnumerator *enumerator = [array reverseObjectEnumerator];
+    for (id element in enumerator) {
+        [results addObject:element];
+    }
+    return results;
+}
+
 /* Method viewDidLoad
  * ---------------------------
  * Gets repository data using
@@ -22,21 +35,53 @@
  */
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self refresh];
+
+    [NSTimer timerWithTimeInterval:10 target:self
+                          selector:@selector(refresh)
+                          userInfo:nil
+                           repeats:YES];
+}
+
+/* Method refresh
+ * -------------------------
+ * Refreshes table view
+ */
+-(void)refresh {
     //Load data
-    self.watched = [[GNGithubApi sharedGitAPI] getWatchedRepos:@"agnusmaximus"];
+    self.watched = (NSMutableArray *)[[GNGithubApi sharedGitAPI]
+                                      getWatchedRepos:@"agnusmaximus"];
+    
+    //Sort in updated order
+    [self.watched sortUsingComparator:
+     ^NSComparisonResult(NSDictionary *obj1, NSDictionary *obj2) {
+         //Get time stamps
+         NSString *timestamp1, *timestamp2;
+         timestamp1 = [obj1 objectForKey:@"updated_at"];
+         timestamp2 = [obj2 objectForKey:@"updated_at"];
+         
+         //Set date
+         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZ"];
+         NSDate *time1 = [formatter dateFromString:timestamp1];
+         NSDate *time2 = [formatter dateFromString:timestamp2];
+         
+         return [time1 compare:time2];
+     }];
+    self.watched = [self reversedArray:self.watched];
+    
     
     //Extract repository names and ids
     self.repoNames = [NSMutableArray array];
     self.repoIds = [NSMutableArray array];
-
+    
     for (NSDictionary *dict in self.watched) {
         
         //Create the title by appending owner's name to repo name
         NSString *name = [[dict objectForKey:@"owner"] objectForKey:@"login"];
         name = [name stringByAppendingFormat:@"/%@", [dict objectForKey:@"name"]];
         
-        //Add to the list 
+        //Add to the list
         [self.repoNames addObject:name];
         
         //Get id
