@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GNNetworkCalls.h"
 #import "GNDatabaseConstants.h"
+#import "SBJson.h"
 
 @interface GNDatabaseAPI : NSObject
 
@@ -16,5 +17,8 @@
 
 +(GNDatabaseAPI *)sharedAPI;
 -(void)createUser:(NSString *)username andId:(NSString *)uid;
+-(void)createRepo:(NSString *)reponame andId:(NSString *)repoid;
+-(void)createRepos:(NSDictionary *)repos;
+-(void)createRelations:(NSString *)uid withRepos:(NSDictionary *)repos;
 
 @end

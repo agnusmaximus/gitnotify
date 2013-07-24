@@ -10,9 +10,15 @@
 #define GitNotify_GNDatabaseConstants_h
 
 //Database URL
-#define CREATE_URL @"http://42c3a868.ngrok.com/create"
+#define CREATE_USER_URL @"http://42c3a868.ngrok.com/createuser"
+#define CREATE_REPO_URL @"http://42c3a868.ngrok.com/createrepo"
+#define CREATE_REPOS_URL @"http://42c3a868.ngrok.com/createrepos"
+#define CREATE_RELATIONS_URL @"http://42c3a868.ngrok.com/createrelations"
 
 //Different methods for the database
 #define CREATE_USER_FORMAT @"name=%@&id=%@"
+#define CREATE_REPO_FORMAT @"name=%@&id=%@"
+#define CREATE_REPOS_FORMAT @"repos=%@"
+#define CREATE_RELATIONS_FORMAT @"id=%@&repos=%@"
 
 #endif

@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void)updateDatabase;
+
 @end

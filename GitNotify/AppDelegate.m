@@ -26,7 +26,20 @@
     //Set window's root view controller to the navigation controller
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
+
+    //Update database
+    [self updateDatabase];
     
+    return YES;
+}
+
+/* Method updateDatabase
+ * ----------------------------
+ * Updates database with user info,
+ * repo info, and relationships
+ * between the two.
+ */
+-(void)updateDatabase {
     //Get user information from github
     NSDictionary *user = [[GNGithubApi sharedGitAPI] getUser:@"agnusmaximus"];
     
@@ -34,7 +47,12 @@
     [[GNDatabaseAPI sharedAPI] createUser:[user objectForKey:@"login"]
                                     andId:[user objectForKey:@"id"]];
     
-    return YES;
+    //Get repository information from github
+    NSDictionary *repos = [[GNGithubApi sharedGitAPI] getUserRepos:@"agnusmaximus"];
+    [[GNDatabaseAPI sharedAPI] createRepos:repos];
+    
+    //Tie user with repositories
+    [[GNDatabaseAPI sharedAPI] createRelations:[user objectForKey:@"id"] withRepos:repos];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
