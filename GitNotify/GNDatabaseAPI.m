@@ -110,4 +110,29 @@
     [self.net postRequest:url withData:data];
 }
 
+/* Method getCommits
+ * --------------------------
+ * Gets commids of a given repo
+ *
+ * @repoId - repository from which
+ *           to pull commits
+ *
+ * @return - NSDictionary representing commits
+ */
+-(NSDictionary *)getCommits:(NSString *)repoId {
+    
+    //Create url
+    NSString *url = GET_COMMITS_URL;
+    NSString *data = [NSString stringWithFormat:GET_COMMITS_FORMAT, repoId];
+    
+    //Execute data
+    NSString *commits = [self.net postRequest:url withData:data];
+    
+    //Parse string data
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *object = [parser objectWithString:commits];
+    
+    return object;
+}
+
 @end

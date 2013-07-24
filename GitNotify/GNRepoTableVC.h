@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import "GNGithubApi.h"
 #import "GNRepoTableCell.h"
 #import "GNRepoTableHeader.h"
+#import "GNCommitsVC.h"
+#import "GNRepoVC.h"
+
+@class GNRepoVC;
 
 @interface GNRepoTableVC : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *watched;
 @property (nonatomic, strong) NSMutableArray *repoNames;
 @property (nonatomic, strong) NSMutableArray *repoIds;
+@property (nonatomic, strong) GNRepoVC *delegate;
 
 @end

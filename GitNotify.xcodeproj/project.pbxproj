@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF47CEEC179F3FF3003EF79C /* GNDatabaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CEEB179F3FF2003EF79C /* GNDatabaseAPI.m */; };
+		AF47CEF7179F9B84003EF79C /* GNCommitsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */; };
+		AF47CEF8179F9B84003EF79C /* GNCommitsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */; };
+		AF47CEFA179FA1A5003EF79C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */; };
 		AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE157179E31E40095B957 /* UIKit.framework */; };
 		AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE159179E31E40095B957 /* Foundation.framework */; };
 		AFBBE15C179E31E40095B957 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE15B179E31E40095B957 /* CoreGraphics.framework */; };
@@ -76,6 +79,10 @@
 		AF47CEEA179F3FF1003EF79C /* GNDatabaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNDatabaseAPI.h; sourceTree = "<group>"; };
 		AF47CEEB179F3FF2003EF79C /* GNDatabaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNDatabaseAPI.m; sourceTree = "<group>"; };
 		AF47CEED179F4019003EF79C /* GNDatabaseConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNDatabaseConstants.h; sourceTree = "<group>"; };
+		AF47CEF4179F9B84003EF79C /* GNCommitsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCommitsVC.h; sourceTree = "<group>"; };
+		AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCommitsVC.m; sourceTree = "<group>"; };
+		AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNCommitsVC.xib; sourceTree = "<group>"; };
+		AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AFBBE154179E31E40095B957 /* GitNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBBE157179E31E40095B957 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFBBE159179E31E40095B957 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF47CEFA179FA1A5003EF79C /* QuartzCore.framework in Frameworks */,
 				AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */,
 				AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */,
 				AFBBE15C179E31E40095B957 /* CoreGraphics.framework in Frameworks */,
@@ -160,9 +168,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF47CEEE179F9B54003EF79C /* GNCommits */ = {
+			isa = PBXGroup;
+			children = (
+				AF47CEF4179F9B84003EF79C /* GNCommitsVC.h */,
+				AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */,
+				AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */,
+			);
+			name = GNCommits;
+			sourceTree = "<group>";
+		};
 		AFBBE14B179E31E40095B957 = {
 			isa = PBXGroup;
 			children = (
+				AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */,
 				AFBBE15D179E31E40095B957 /* GitNotify */,
 				AFBBE17B179E31E50095B957 /* GitNotifyTests */,
 				AFBBE156179E31E40095B957 /* Frameworks */,
@@ -198,6 +217,7 @@
 				AFBBE18C179E36A80095B957 /* Model */,
 				AFBBE166179E31E40095B957 /* AppDelegate.h */,
 				AFBBE167179E31E40095B957 /* AppDelegate.m */,
+				AF47CEEE179F9B54003EF79C /* GNCommits */,
 				AFBBE1D5179E45B70095B957 /* GNRepo */,
 				AFBBE15E179E31E40095B957 /* Supporting Files */,
 			);
@@ -378,6 +398,7 @@
 				AFBBE1D3179E45920095B957 /* GNRepoTableVC.xib in Resources */,
 				AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */,
 				AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */,
+				AF47CEF8179F9B84003EF79C /* GNCommitsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +456,7 @@
 				AFBBE1D8179E48190095B957 /* GNRepoTableCell.m in Sources */,
 				AFBBE1DF179E4CE30095B957 /* GNRepoTableHeader.m in Sources */,
 				AF47CEEC179F3FF3003EF79C /* GNDatabaseAPI.m in Sources */,
+				AF47CEF7179F9B84003EF79C /* GNCommitsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

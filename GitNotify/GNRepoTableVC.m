@@ -132,6 +132,14 @@
     headerView.layer.shadowOffset = CGSizeMake(.2f, .2f);
     headerView.layer.shadowColor = [[UIColor blackColor] CGColor];
     
+    //Add gradient
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = headerView.bounds;
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[[UIColor colorWithRed:.8 green:.8 blue:.8 alpha:1] CGColor],
+                       (id)[[UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1] CGColor], nil];
+    [headerView.layer insertSublayer:gradient atIndex:0];
+    
     return headerView;
 }
 
@@ -143,7 +151,18 @@
  * navigates to the notification view controller
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Deselect cell
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //Get repository id
+    NSString *repo_id = [self.repoIds objectAtIndex:indexPath.row];
+    
+    //Create commits vc and set repository id of the vc
+    GNCommitsVC *commitsVC = [[GNCommitsVC alloc] initWithNibName:@"GNCommitsVC" bundle:nil];
+    [commitsVC setRepoId:repo_id];
+        
+    //Transition to commits vc
+    [self.delegate.navigationController pushViewController:commitsVC animated:YES];
 }
 
 @end

@@ -9,6 +9,6 @@
 #ifndef GitNotify_GNGlobals_h
 #define GitNotify_GNGlobals_h
 
-#define DEBUG_TEST 1
+#define DEBUG_TEST 0
 
 #endif

@@ -20,5 +20,6 @@
 -(void)createRepo:(NSString *)reponame andId:(NSString *)repoid;
 -(void)createRepos:(NSDictionary *)repos;
 -(void)createRelations:(NSString *)uid withRepos:(NSDictionary *)repos;
+-(NSDictionary *)getCommits:(NSString *)repoId;
 
 @end

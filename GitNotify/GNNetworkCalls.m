@@ -39,7 +39,6 @@
     //Check for errors
     if([responseCode statusCode] != 200){
         NSLog(@"Error: getting %@, HTTP status code %i", url, [responseCode statusCode]);
-        exit(1);
     }
     
     //Convert data to string
@@ -86,7 +85,6 @@
     //Check for errors
     if([responseCode statusCode] != 200){
         NSLog(@"Error: getting %@, HTTP status code %i", url, [responseCode statusCode]);
-        exit(1);
     }
     
     //Convert data to string

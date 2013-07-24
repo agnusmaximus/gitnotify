@@ -11,7 +11,7 @@
 #import "GNRepoVC.h"
 #import "GNDatabaseAPI.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate> {
     GNRepoVC *repoVC;
 }
 

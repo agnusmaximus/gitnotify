@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GNRepoTableVC.h"
 
+@class GNRepoTableVC;
+
 @interface GNRepoVC : UIViewController
 
 @property (nonatomic, strong) GNRepoTableVC *tableVC;

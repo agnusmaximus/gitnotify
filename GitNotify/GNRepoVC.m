@@ -26,6 +26,7 @@
         
         //Create table vc and add to subview
         self.tableVC = [[GNRepoTableVC alloc] initWithNibName:@"GNRepoTableVC" bundle:nil];
+        self.tableVC.delegate = self;
         [self.view addSubview:self.tableVC.view];
     }
     return self;

@@ -22,13 +22,14 @@
     
     //Set navigation controller topbar to none
     navController.navigationBar.hidden = YES;
+    navController.delegate = self;
     
     //Set window's root view controller to the navigation controller
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
 
     //Update database
-    [self updateDatabase];
+    [self performSelectorInBackground:@selector(updateDatabase) withObject:nil];
     
     return YES;
 }
