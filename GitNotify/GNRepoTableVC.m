@@ -35,10 +35,18 @@
  */
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [self refresh];
-
-    [NSTimer timerWithTimeInterval:10 target:self
-                          selector:@selector(refresh)
+    
+    //Register custom cells
+    [self.tableView registerNib:[UINib nibWithNibName:@"GNRepoTableCell" bundle:nil]
+         forCellReuseIdentifier:@"Cell"];
+    
+    //Refresh data
+    [self refreshData];
+    
+    //Do updates every few seconds
+    [NSTimer scheduledTimerWithTimeInterval:10
+                            target:self
+                          selector:@selector(refreshData)
                           userInfo:nil
                            repeats:YES];
 }
@@ -47,7 +55,7 @@
  * -------------------------
  * Refreshes table view
  */
--(void)refresh {
+-(void)refreshData {
     //Load data
     self.watched = (NSMutableArray *)[[GNGithubApi sharedGitAPI]
                                       getWatchedRepos:@"agnusmaximus"];
@@ -88,10 +96,6 @@
         NSString *repo_id = [dict objectForKey:@"id"];
         [self.repoIds addObject:repo_id];
     }
-    
-    //Register custom cells
-    [self.tableView registerNib:[UINib nibWithNibName:@"GNRepoTableCell" bundle:nil]
-         forCellReuseIdentifier:@"Cell"];
     
     //Reload data
     [self.tableView reloadData];
