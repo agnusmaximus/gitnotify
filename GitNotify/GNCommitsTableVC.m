@@ -58,7 +58,6 @@
  * repositories the user has
  */
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"%@", self.commits);
     return [self.commits count];
 }
 
@@ -70,7 +69,7 @@
  */
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *text = [[self.commits objectAtIndex:indexPath.row] objectForKey:@"message"];
-    return MAX(1.5, text.length / 40.0) * 30 + 20;
+    return MAX(1.5, ceil(text.length / 40.0)) * 30 + 20;
 }
 
 /* Method cellForRowAtIndexPath
