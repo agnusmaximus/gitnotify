@@ -68,8 +68,15 @@
  * of commit message
  */
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *text = [[self.commits objectAtIndex:indexPath.row] objectForKey:@"message"];
-    return MAX(1.5, ceil(text.length / 40.0)) * 30 + 20;
+    NSString *commitMessage = [[self.commits objectAtIndex:indexPath.row] objectForKey:@"message"];
+    
+    CGSize maximumLabelSize = CGSizeMake(252, FLT_MAX);
+    CGSize expectedLabelSize = [commitMessage sizeWithFont:[UIFont fontWithName:@"Avenir-Medium"
+                                                                           size:12]
+                                         constrainedToSize:maximumLabelSize
+                                             lineBreakMode:NSLineBreakByWordWrapping];
+    
+    return expectedLabelSize.height + 60;
 }
 
 /* Method cellForRowAtIndexPath
