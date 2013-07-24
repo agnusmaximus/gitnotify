@@ -11,6 +11,13 @@
 		AF47CEF7179F9B84003EF79C /* GNCommitsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */; };
 		AF47CEF8179F9B84003EF79C /* GNCommitsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */; };
 		AF47CEFA179FA1A5003EF79C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */; };
+		AF47CEFE179FB7B2003EF79C /* GNCommitsTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CEFC179FB7B2003EF79C /* GNCommitsTableVC.m */; };
+		AF47CEFF179FB7B2003EF79C /* GNCommitsTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47CEFD179FB7B2003EF79C /* GNCommitsTableVC.xib */; };
+		AF47CF02179FBA86003EF79C /* GNCommitsTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CF01179FBA86003EF79C /* GNCommitsTableHeader.m */; };
+		AF47CF04179FBAAE003EF79C /* GNCommitsTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47CF03179FBAAD003EF79C /* GNCommitsTableHeader.xib */; };
+		AF47CF06179FBC2E003EF79C /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47CF05179FBC2E003EF79C /* back.png */; };
+		AF47CF0E17A02ADA003EF79C /* GNCommitsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47CF0D17A02ADA003EF79C /* GNCommitsTableCell.m */; };
+		AF47CF1017A02AE7003EF79C /* GNCommitsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47CF0F17A02AE6003EF79C /* GNCommitsTableCell.xib */; };
 		AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE157179E31E40095B957 /* UIKit.framework */; };
 		AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE159179E31E40095B957 /* Foundation.framework */; };
 		AFBBE15C179E31E40095B957 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE15B179E31E40095B957 /* CoreGraphics.framework */; };
@@ -83,6 +90,16 @@
 		AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCommitsVC.m; sourceTree = "<group>"; };
 		AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNCommitsVC.xib; sourceTree = "<group>"; };
 		AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF47CEFB179FB7B1003EF79C /* GNCommitsTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCommitsTableVC.h; sourceTree = "<group>"; };
+		AF47CEFC179FB7B2003EF79C /* GNCommitsTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCommitsTableVC.m; sourceTree = "<group>"; };
+		AF47CEFD179FB7B2003EF79C /* GNCommitsTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNCommitsTableVC.xib; sourceTree = "<group>"; };
+		AF47CF00179FBA85003EF79C /* GNCommitsTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCommitsTableHeader.h; sourceTree = "<group>"; };
+		AF47CF01179FBA86003EF79C /* GNCommitsTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCommitsTableHeader.m; sourceTree = "<group>"; };
+		AF47CF03179FBAAD003EF79C /* GNCommitsTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNCommitsTableHeader.xib; sourceTree = "<group>"; };
+		AF47CF05179FBC2E003EF79C /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		AF47CF0C17A02AD9003EF79C /* GNCommitsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNCommitsTableCell.h; sourceTree = "<group>"; };
+		AF47CF0D17A02ADA003EF79C /* GNCommitsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNCommitsTableCell.m; sourceTree = "<group>"; };
+		AF47CF0F17A02AE6003EF79C /* GNCommitsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNCommitsTableCell.xib; sourceTree = "<group>"; };
 		AFBBE154179E31E40095B957 /* GitNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBBE157179E31E40095B957 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFBBE159179E31E40095B957 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,6 +191,15 @@
 				AF47CEF4179F9B84003EF79C /* GNCommitsVC.h */,
 				AF47CEF5179F9B84003EF79C /* GNCommitsVC.m */,
 				AF47CEF6179F9B84003EF79C /* GNCommitsVC.xib */,
+				AF47CEFB179FB7B1003EF79C /* GNCommitsTableVC.h */,
+				AF47CEFC179FB7B2003EF79C /* GNCommitsTableVC.m */,
+				AF47CEFD179FB7B2003EF79C /* GNCommitsTableVC.xib */,
+				AF47CF0C17A02AD9003EF79C /* GNCommitsTableCell.h */,
+				AF47CF0D17A02ADA003EF79C /* GNCommitsTableCell.m */,
+				AF47CF0F17A02AE6003EF79C /* GNCommitsTableCell.xib */,
+				AF47CF00179FBA85003EF79C /* GNCommitsTableHeader.h */,
+				AF47CF01179FBA86003EF79C /* GNCommitsTableHeader.m */,
+				AF47CF03179FBAAD003EF79C /* GNCommitsTableHeader.xib */,
 			);
 			name = GNCommits;
 			sourceTree = "<group>";
@@ -227,6 +253,7 @@
 		AFBBE15E179E31E40095B957 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF47CF05179FBC2E003EF79C /* back.png */,
 				AFBBE15F179E31E40095B957 /* GitNotify-Info.plist */,
 				AFBBE160179E31E40095B957 /* InfoPlist.strings */,
 				AFBBE163179E31E40095B957 /* main.m */,
@@ -399,6 +426,10 @@
 				AFBBE1DB179E48270095B957 /* GNRepoTableCell.xib in Resources */,
 				AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */,
 				AF47CEF8179F9B84003EF79C /* GNCommitsVC.xib in Resources */,
+				AF47CEFF179FB7B2003EF79C /* GNCommitsTableVC.xib in Resources */,
+				AF47CF04179FBAAE003EF79C /* GNCommitsTableHeader.xib in Resources */,
+				AF47CF06179FBC2E003EF79C /* back.png in Resources */,
+				AF47CF1017A02AE7003EF79C /* GNCommitsTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +488,9 @@
 				AFBBE1DF179E4CE30095B957 /* GNRepoTableHeader.m in Sources */,
 				AF47CEEC179F3FF3003EF79C /* GNDatabaseAPI.m in Sources */,
 				AF47CEF7179F9B84003EF79C /* GNCommitsVC.m in Sources */,
+				AF47CEFE179FB7B2003EF79C /* GNCommitsTableVC.m in Sources */,
+				AF47CF02179FBA86003EF79C /* GNCommitsTableHeader.m in Sources */,
+				AF47CF0E17A02ADA003EF79C /* GNCommitsTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

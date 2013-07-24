@@ -23,6 +23,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        //Add tableview
+        self.commitsVC = [[GNCommitsTableVC alloc] initWithNibName:@"GNCommitsTableVC" bundle:nil];
+        self.commitsVC.delegate = self;
+        [self.view addSubview:self.commitsVC.view];
     }
     return self;
 }
@@ -39,6 +43,20 @@
     
     //Pull commits into array
     self.commits = [[GNDatabaseAPI sharedAPI] getCommits:repoId];
+    
+    //Assign commits
+    self.commitsVC.commits = (NSArray *)self.commits;
+    
+    //Reload data
+    [self.commitsVC.tableView reloadData];
+}
+
+/* Method setRepoName
+ * ---------------------------
+ * Sets repository name
+ */
+-(void)setRepoName:(NSString *)repoName {
+    [self.commitsVC setRepoName:repoName];
 }
 
 /* Method viewdidLoad

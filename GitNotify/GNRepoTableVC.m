@@ -136,8 +136,8 @@
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = headerView.bounds;
     gradient.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor colorWithRed:.8 green:.8 blue:.8 alpha:1] CGColor],
-                       (id)[[UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1] CGColor], nil];
+                       (id)[[UIColor colorWithRed:.93 green:.93 blue:.93 alpha:1] CGColor],
+                       (id)[[UIColor colorWithRed:.95 green:.95 blue:.95 alpha:1] CGColor], nil];
     [headerView.layer insertSublayer:gradient atIndex:0];
     
     return headerView;
@@ -156,10 +156,12 @@
     
     //Get repository id
     NSString *repo_id = [self.repoIds objectAtIndex:indexPath.row];
+    NSString *repo_name = [self.repoNames objectAtIndex:indexPath.row];
     
     //Create commits vc and set repository id of the vc
     GNCommitsVC *commitsVC = [[GNCommitsVC alloc] initWithNibName:@"GNCommitsVC" bundle:nil];
     [commitsVC setRepoId:repo_id];
+    [commitsVC setRepoName:repo_name];
         
     //Transition to commits vc
     [self.delegate.navigationController pushViewController:commitsVC animated:YES];
