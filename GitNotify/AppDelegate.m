@@ -27,6 +27,13 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
+    //Get user information from github
+    NSDictionary *user = [[GNGithubApi sharedGitAPI] getUser:@"agnusmaximus"];
+    
+    //Create a user on the database
+    [[GNDatabaseAPI sharedAPI] createUser:[user objectForKey:@"login"]
+                                    andId:[user objectForKey:@"id"]];
+    
     return YES;
 }
 

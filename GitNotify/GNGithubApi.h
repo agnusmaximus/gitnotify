@@ -19,5 +19,6 @@
 
 -(NSDictionary *)getUserRepos:(NSString *)username;
 -(NSDictionary *)getWatchedRepos:(NSString *)username;
+-(NSDictionary *)getUser:(NSString *)username;
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GNGithubApi.h"
 #import "GNRepoVC.h"
+#import "GNDatabaseAPI.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     GNRepoVC *repoVC;

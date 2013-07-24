@@ -91,10 +91,7 @@
     if (DEBUG_TEST) {
         NSLog(@"GNGithubAPI.getWatchedRepos: %@", url);
     }
-    
-    //array holding
-    NSMutableArray *repositories = [NSMutableArray array];
-    
+        
     //MAke network request
     NSString *data = [net getRequest:url];
     
@@ -104,6 +101,38 @@
     
     if (DEBUG_TEST) {
         NSLog(@"GNGithubAPI.getWatchedRepos: %@", json);
+    }
+    
+    return json;
+}
+
+/* Method getUser
+ * --------------------------
+ * Gets user by user name
+ * 
+ * @username - user to get
+ * @return - NSDictionary representing user
+ */
+-(NSDictionary *)getUser:(NSString *)username {
+    //Create url
+    NSString *head = BASE_URL;
+    NSString *partialUrl = [NSString stringWithFormat:GET_USER_FORMAT, username];
+    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
+    
+    if (DEBUG_TEST) {
+        NSLog(@"GNGithubAPI.getUser: %@", url);
+    }
+    
+    //Make network request
+    NSString *data = [net getRequest:url];
+    
+    //Parse json string
+    
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *json = [parser objectWithString:data];
+    
+    if (DEBUG_TEST) {
+        NSLog(@"GNGithubAPI.getUser: %@", json);
     }
     
     return json;
