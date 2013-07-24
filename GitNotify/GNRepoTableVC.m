@@ -26,11 +26,22 @@
     //Load data
     self.watched = [[GNGithubApi sharedGitAPI] getWatchedRepos:@"agnusmaximus"];
     
-    //Extract repository names
+    //Extract repository names and ids
     self.repoNames = [NSMutableArray array];
+    self.repoIds = [NSMutableArray array];
 
     for (NSDictionary *dict in self.watched) {
-        [self.repoNames addObject:[dict objectForKey:@"name"]];
+        
+        //Create the title by appending owner's name to repo name
+        NSString *name = [[dict objectForKey:@"owner"] objectForKey:@"login"];
+        name = [name stringByAppendingFormat:@"/%@", [dict objectForKey:@"name"]];
+        
+        //Add to the list 
+        [self.repoNames addObject:name];
+        
+        //Get id
+        NSString *repo_id = [dict objectForKey:@"id"];
+        [self.repoIds addObject:repo_id];
     }
     
     //Register custom cells

@@ -16,5 +16,6 @@
 
 @property (nonatomic, strong) NSDictionary *watched;
 @property (nonatomic, strong) NSMutableArray *repoNames;
+@property (nonatomic, strong) NSMutableArray *repoIds;
 
 @end
