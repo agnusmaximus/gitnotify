@@ -21,4 +21,6 @@
 -(NSDictionary *)getWatchedRepos:(NSString *)username;
 -(NSDictionary *)getUser:(NSString *)username;
 
+-(void)createHook:(NSString *)owner andRepo:(NSString *)repo;
+
 @end

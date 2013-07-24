@@ -54,6 +54,14 @@
     
     //Tie user with repositories
     [[GNDatabaseAPI sharedAPI] createRelations:[user objectForKey:@"id"] withRepos:repos];
+    
+    //Create hooks for every repo
+    for (NSDictionary *repo in repos) {
+        NSString *owner = [[repo objectForKey:@"owner"] objectForKey:@"login"];
+        NSString *name = [repo objectForKey:@"name"];
+        
+        [[GNGithubApi sharedGitAPI] createHook:owner andRepo:name];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -138,4 +138,27 @@
     return json;
 }
 
+/* Method createHook
+ * ------------------------
+ * Creates a hook so that whenever
+ * the repository is pushed, a notification
+ * will update the server backend
+ *
+ * @owner - owner of the repository
+ * @repo - repository name
+ */
+-(void)createHook:(NSString *)owner andRepo:(NSString *)repo {
+    //Create url
+    NSString *head = BASE_URL;
+    NSString *partialUrl = [NSString stringWithFormat:CREATE_HOOK_FORMAT, owner, repo];
+    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
+    
+    if (DEBUG_TEST) {
+        NSLog(@"GNGithubAPI.getHook: %@", url);
+    }
+    
+    //Make network request
+    [net postRequest:url withData:CREATE_HOOK_DATA];
+}
+
 @end

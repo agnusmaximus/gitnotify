@@ -49,6 +49,8 @@
     
     //Reload data
     [self.commitsVC.tableView reloadData];
+    
+    [self.commitsVC.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
 }
 
 /* Method setRepoName

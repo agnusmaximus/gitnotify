@@ -19,5 +19,8 @@
 #define LIST_REPO_FORMAT @"users/%@/repos"
 #define LIST_WATCHED_REPO_FORMAT @"users/%@/subscriptions"
 #define GET_USER_FORMAT @"users/%@"
+#define CREATE_HOOK_FORMAT @"repos/%@/%@/hooks"
+
+#define CREATE_HOOK_DATA @"{\"name\": \"web\",\"active\": true,\"events\": [\"push\",\"pull_request\"],\"config\": {\"url\": \"http://42c3a868.ngrok.com\",\"content_type\": \"json\"}}"
 
 #endif

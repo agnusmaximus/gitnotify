@@ -83,7 +83,8 @@
                                                               error:&error];
     
     //Check for errors
-    if([responseCode statusCode] != 200){
+    if([responseCode statusCode] != 200 &&
+       [responseCode statusCode] != 422){
         NSLog(@"Error: getting %@, HTTP status code %i", url, [responseCode statusCode]);
     }
     
