@@ -94,9 +94,7 @@
     
     //Result string
     NSString *result = @"";
-    
-    NSLog(@"%d", seconds);
-    
+        
     //Show in days
     if (seconds / 86400 > 0) {
         result = [NSString stringWithFormat:@"%dd ago", seconds/86400];
