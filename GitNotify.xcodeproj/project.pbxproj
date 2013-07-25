@@ -27,11 +27,8 @@
 		AFBBE16A179E31E40095B957 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE169179E31E40095B957 /* Default.png */; };
 		AFBBE16C179E31E40095B957 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE16B179E31E40095B957 /* Default@2x.png */; };
 		AFBBE16E179E31E40095B957 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE16D179E31E40095B957 /* Default-568h@2x.png */; };
-		AFBBE176179E31E50095B957 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE175179E31E50095B957 /* SenTestingKit.framework */; };
 		AFBBE177179E31E50095B957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE157179E31E40095B957 /* UIKit.framework */; };
 		AFBBE178179E31E50095B957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBBE159179E31E40095B957 /* Foundation.framework */; };
-		AFBBE180179E31E50095B957 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE17E179E31E50095B957 /* InfoPlist.strings */; };
-		AFBBE183179E31E50095B957 /* GitNotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE182179E31E50095B957 /* GitNotifyTests.m */; };
 		AFBBE18F179E36CF0095B957 /* GNGithubApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE18E179E36CF0095B957 /* GNGithubApi.m */; };
 		AFBBE193179E38060095B957 /* GNNetworkCalls.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE192179E38060095B957 /* GNNetworkCalls.m */; };
 		AFBBE1AB179E40CF0095B957 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE198179E40CF0095B957 /* SBJsonParser.m */; };
@@ -128,11 +125,6 @@
 		AFBBE16B179E31E40095B957 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFBBE16D179E31E40095B957 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFBBE174179E31E50095B957 /* GitNotifyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitNotifyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFBBE175179E31E50095B957 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		AFBBE17D179E31E50095B957 /* GitNotifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitNotifyTests-Info.plist"; sourceTree = "<group>"; };
-		AFBBE17F179E31E50095B957 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AFBBE181179E31E50095B957 /* GitNotifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitNotifyTests.h; sourceTree = "<group>"; };
-		AFBBE182179E31E50095B957 /* GitNotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitNotifyTests.m; sourceTree = "<group>"; };
 		AFBBE18D179E36CF0095B957 /* GNGithubApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNGithubApi.h; sourceTree = "<group>"; };
 		AFBBE18E179E36CF0095B957 /* GNGithubApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNGithubApi.m; sourceTree = "<group>"; };
 		AFBBE190179E36ED0095B957 /* GNAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNAPIConstants.h; sourceTree = "<group>"; };
@@ -217,7 +209,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBBE176179E31E50095B957 /* SenTestingKit.framework in Frameworks */,
 				AFBBE177179E31E50095B957 /* UIKit.framework in Frameworks */,
 				AFBBE178179E31E50095B957 /* Foundation.framework in Frameworks */,
 			);
@@ -251,7 +242,6 @@
 				AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */,
 				AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */,
 				AFBBE15D179E31E40095B957 /* GitNotify */,
-				AFBBE17B179E31E50095B957 /* GitNotifyTests */,
 				AFBBE156179E31E40095B957 /* Frameworks */,
 				AFBBE155179E31E40095B957 /* Products */,
 			);
@@ -272,7 +262,6 @@
 				AFBBE157179E31E40095B957 /* UIKit.framework */,
 				AFBBE159179E31E40095B957 /* Foundation.framework */,
 				AFBBE15B179E31E40095B957 /* CoreGraphics.framework */,
-				AFBBE175179E31E50095B957 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,25 +294,6 @@
 				AFBBE169179E31E40095B957 /* Default.png */,
 				AFBBE16B179E31E40095B957 /* Default@2x.png */,
 				AFBBE16D179E31E40095B957 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AFBBE17B179E31E50095B957 /* GitNotifyTests */ = {
-			isa = PBXGroup;
-			children = (
-				AFBBE181179E31E50095B957 /* GitNotifyTests.h */,
-				AFBBE182179E31E50095B957 /* GitNotifyTests.m */,
-				AFBBE17C179E31E50095B957 /* Supporting Files */,
-			);
-			path = GitNotifyTests;
-			sourceTree = "<group>";
-		};
-		AFBBE17C179E31E50095B957 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFBBE17D179E31E50095B957 /* GitNotifyTests-Info.plist */,
-				AFBBE17E179E31E50095B957 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -522,7 +492,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBBE180179E31E50095B957 /* InfoPlist.strings in Resources */,
 				AFBBE1C5179E43A20095B957 /* GNRepoVC.xib in Resources */,
 				AFBBE1D4179E45920095B957 /* GNRepoTableVC.xib in Resources */,
 				AFBBE1DC179E48270095B957 /* GNRepoTableCell.xib in Resources */,
@@ -594,7 +563,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBBE183179E31E50095B957 /* GitNotifyTests.m in Sources */,
 				AFBBE1AC179E40CF0095B957 /* SBJsonParser.m in Sources */,
 				AFBBE1AE179E40CF0095B957 /* SBJsonStreamParser.m in Sources */,
 				AFBBE1B0179E40CF0095B957 /* SBJsonStreamParserAccumulator.m in Sources */,
@@ -627,14 +595,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AFBBE161179E31E40095B957 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AFBBE17E179E31E50095B957 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFBBE17F179E31E50095B957 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
