@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GNDatabaseAPI.h"
+#import "GNGithubApi.h"
 #import "GNCommitsTableVC.h"
 
 @class GNCommitsTableVC;

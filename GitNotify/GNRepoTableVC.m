@@ -271,11 +271,6 @@
     [commitsVC setRepoId:repo_id];
     [commitsVC setRepoName:repo_name];
     
-    //Set this repo to seen
-    [[GNDatabaseAPI sharedAPI] setSeenRepo:
-     [NSString stringWithFormat:@"%d", [GNGithubApi sharedGitAPI].uid]
-                                       and:repo_id];
-    
     //Transition to commits vc
     [self.delegate.navigationController pushViewController:commitsVC animated:YES];
     

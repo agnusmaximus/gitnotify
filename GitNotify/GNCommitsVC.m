@@ -45,7 +45,6 @@
  * changes
  */
 -(void)update {
-    NSLog(@"upating %@", self.repositoryId);
     [self setRepoId:self.repositoryId];
 }
 
@@ -82,6 +81,11 @@
     
     //Reload data
     [self.commitsVC.tableView reloadData];
+    
+    //Set this repo to seen
+    [[GNDatabaseAPI sharedAPI] setSeenRepo:
+     [NSString stringWithFormat:@"%d", [GNGithubApi sharedGitAPI].uid]
+                                       and:self.repositoryId];
 }
 
 /* Method setRepoName
