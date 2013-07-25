@@ -73,8 +73,12 @@
     //Request watched repos
     [engine repositoriesForUser:username includeWatched:YES success:^(NSDictionary *repos) {
         //Perform selector on repositories
-        if ([delegate respondsToSelector:sel])
+        if ([delegate respondsToSelector:sel]) {
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [delegate performSelector:sel withObject:repos];
+            #pragma clang pop
+        }
         
     } failure:^(NSError *error) {
         //Print error
@@ -94,8 +98,13 @@
     [engine userWithSuccess:^(NSDictionary *user) {
         
         //Call callback method
-        if ([delegate respondsToSelector:sel])
+        if ([delegate respondsToSelector:sel]) {
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [delegate performSelector:sel withObject:user];
+            #pragma clang pop
+        }
+
         
     } failure:^(NSError *err) {
         //Print error
@@ -126,8 +135,7 @@
                 int hookId = [[[obj objectAtIndex:0] objectForKey:@"id"] intValue];
                 
                 //Test hook
-                [engine testHook:hookId
-                 
+                [engine testHook:hookId                 
                    forRepository:[owner stringByAppendingFormat:@"/%@", repo]
                          success:^(BOOL obj) {
                              

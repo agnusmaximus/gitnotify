@@ -57,7 +57,7 @@
     //Pull commits into array
     self.commits = [[GNDatabaseAPI sharedAPI] getCommits:repoId];
     
-    self.commits = [self reversedArray:self.commits];
+    self.commits = (NSDictionary *)[self reversedArray:(NSMutableArray *)self.commits];
     
     //Assign commits
     self.commitsVC.commits = (NSArray *)self.commits;
