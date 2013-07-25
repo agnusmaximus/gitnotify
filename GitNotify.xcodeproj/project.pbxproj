@@ -81,6 +81,8 @@
 		AFFBCAB717A07766005A9525 /* UAGithubURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAAC17A07766005A9525 /* UAGithubURLConnection.m */; };
 		AFFBCAB817A07766005A9525 /* UAReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAAE17A07766005A9525 /* UAReachability.m */; };
 		AFFBCABA17A078DD005A9525 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */; };
+		AFFBCABF17A0EF49005A9525 /* GNLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCABD17A0EF49005A9525 /* GNLoginVC.m */; };
+		AFFBCAC017A0EF49005A9525 /* GNLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFBCABE17A0EF49005A9525 /* GNLoginVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,9 @@
 		AFFBCAAD17A07766005A9525 /* UAReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAReachability.h; sourceTree = "<group>"; };
 		AFFBCAAE17A07766005A9525 /* UAReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAReachability.m; sourceTree = "<group>"; };
 		AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AFFBCABC17A0EF49005A9525 /* GNLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNLoginVC.h; sourceTree = "<group>"; };
+		AFFBCABD17A0EF49005A9525 /* GNLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNLoginVC.m; sourceTree = "<group>"; };
+		AFFBCABE17A0EF49005A9525 /* GNLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNLoginVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +283,7 @@
 				AFBBE18C179E36A80095B957 /* Model */,
 				AFBBE166179E31E40095B957 /* AppDelegate.h */,
 				AFBBE167179E31E40095B957 /* AppDelegate.m */,
+				AFFBCABB17A0EF30005A9525 /* GNLogin */,
 				AF47CEEE179F9B54003EF79C /* GNCommits */,
 				AFBBE1D5179E45B70095B957 /* GNRepo */,
 				AFBBE15E179E31E40095B957 /* Supporting Files */,
@@ -410,6 +416,16 @@
 			name = GitEngine;
 			sourceTree = "<group>";
 		};
+		AFFBCABB17A0EF30005A9525 /* GNLogin */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBCABC17A0EF49005A9525 /* GNLoginVC.h */,
+				AFFBCABD17A0EF49005A9525 /* GNLoginVC.m */,
+				AFFBCABE17A0EF49005A9525 /* GNLoginVC.xib */,
+			);
+			name = GNLogin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,6 +510,7 @@
 				AF47CF04179FBAAE003EF79C /* GNCommitsTableHeader.xib in Resources */,
 				AF47CF06179FBC2E003EF79C /* back.png in Resources */,
 				AF47CF1017A02AE7003EF79C /* GNCommitsTableCell.xib in Resources */,
+				AFFBCAC017A0EF49005A9525 /* GNLoginVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +582,7 @@
 				AFFBCAB617A07766005A9525 /* UAGithubJSONParser.m in Sources */,
 				AFFBCAB717A07766005A9525 /* UAGithubURLConnection.m in Sources */,
 				AFFBCAB817A07766005A9525 /* UAReachability.m in Sources */,
+				AFFBCABF17A0EF49005A9525 /* GNLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

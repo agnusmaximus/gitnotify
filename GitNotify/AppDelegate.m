@@ -11,17 +11,15 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    //Login
-
-    
+{    
     //Set up UI
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //Set up navigation controller with repovc as root view controller
-    repoVC = [[GNRepoVC alloc] initWithNibName:@"GNRepoVC" bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:repoVC];
+    //Set up navigation controller with loginvc as root view controller
+    loginVC = [[GNLoginVC alloc] initWithNibName:@"GNLoginVC" bundle:nil];
+    loginVC.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginVC];
     
     //Set navigation controller topbar to none
     navController.navigationBar.hidden = YES;
@@ -31,10 +29,31 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
+    return YES;
+}
+
+/* Method transitionToRepositories
+ * -----------------------------------
+ * Transitions to repository vc. Assumes logged
+ * in
+ */
+-(void)transitionToRepositories {
     //Update
     [self performSelectorInBackground:@selector(update) withObject:nil];
     
-    return YES;
+    //Create repo vc
+    repoVC = [[GNRepoVC alloc] initWithNibName:@"GNRepoVC" bundle:nil];
+    
+    //transition
+    [loginVC.navigationController pushViewController:repoVC animated:YES];
+}
+
+/* Method login
+ * ----------------------
+ * Uses github api to login
+ */
+-(BOOL)login:(NSString *)username andPassword:(NSString *)password {
+    return [[GNGithubApi sharedGitAPI] login:username andPass:password];
 }
 
 /* Method updateDatabase

@@ -172,7 +172,7 @@
  * returns back to the repo
  */
 -(void)back {
-    [self.delegate.navigationController popToRootViewControllerAnimated:YES];
+    [self.delegate.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view delegate

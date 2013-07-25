@@ -20,7 +20,7 @@
 
 +(GNGithubApi *)sharedGitAPI;
 
--(void)login:(NSString *)username andPass:(NSString *)password;
+-(BOOL)login:(NSString *)username andPass:(NSString *)password;
 -(void)getUserReposWithDelegate:(id)delegate andSelector:(SEL)sel;
 -(void)getUserWithDelegate:(id)delegate andSelector:(SEL)sel;
 -(void)createHook:(NSString *)owner andRepo:(NSString *)repo;

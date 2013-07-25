@@ -93,6 +93,8 @@
          
          return [time1 compare:time2];
      }];
+    
+    //Reverse array
     self.watched = [self reversedArray:self.watched];
     
     

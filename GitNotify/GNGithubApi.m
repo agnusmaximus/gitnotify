@@ -44,11 +44,12 @@
  * -------------------------
  * Logs in
  */
--(void)login:(NSString *)username andPass:(NSString *)password {
+-(BOOL)login:(NSString *)username andPass:(NSString *)password {
     engine = [[UAGithubEngine alloc] initWithUsername:username
                                              password:password
                                      withReachability:YES];
     uname = username;
+    return [engine isReachable];
 }
 
 /* Method getUserRepos

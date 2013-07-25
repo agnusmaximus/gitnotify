@@ -22,6 +22,6 @@
 @property (nonatomic, strong) NSMutableArray *watched;
 @property (nonatomic, strong) NSMutableArray *repoNames;
 @property (nonatomic, strong) NSMutableArray *repoIds;
-@property (nonatomic, strong) GNRepoVC *delegate;
+@property (nonatomic, weak) GNRepoVC *delegate;
 
 @end

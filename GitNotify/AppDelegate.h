@@ -10,9 +10,13 @@
 #import "GNGithubApi.h"
 #import "GNRepoVC.h"
 #import "GNDatabaseAPI.h"
+#import "GNLoginVC.h"
+
+@class GNLoginVC;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate> {
     GNRepoVC *repoVC;
+    GNLoginVC *loginVC;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -20,5 +24,7 @@
 
 -(void)update;
 -(void)updateDatabase:(NSArray *)userArray;
+-(BOOL)login:(NSString *)username andPassword:(NSString *)password;
+-(void)transitionToRepositories;
 
 @end

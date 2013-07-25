@@ -17,7 +17,7 @@
 @interface GNCommitsTableVC : UITableViewController
 
 @property (nonatomic, strong) NSArray *commits;
-@property (nonatomic, strong) GNCommitsVC *delegate;
+@property (nonatomic, weak) GNCommitsVC *delegate;
 @property (nonatomic, strong) NSString *repoName;
 
 -(void)back;
