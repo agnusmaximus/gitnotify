@@ -184,6 +184,7 @@
         case UAGithubMarkdownRequest:
         case UAGithubRepositoryMergeRequest:
         case UAGithubRepositoryHookAddRequest:
+        case UAGithubRepositoryHookTestRequest:
 		{
 			[urlRequest setHTTPMethod:@"POST"];
 		}
@@ -1392,7 +1393,7 @@
 
 - (void)testHook:(NSInteger)hookId forRepository:(NSString *)repositoryPath success:(UAGithubEngineBooleanSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
 {
-    [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/hooks/%ld", repositoryPath, hookId] requestType:UAGithubRepositoryHookTestRequest responseType:UAGithubNoContentResponse error:nil];} booleanSuccess:successBlock failure:failureBlock];
+    [self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"repos/%@/hooks/%ld/tests", repositoryPath, hookId] requestType:UAGithubRepositoryHookTestRequest responseType:UAGithubNoContentResponse error:nil];} booleanSuccess:successBlock failure:failureBlock];
 }
 
 

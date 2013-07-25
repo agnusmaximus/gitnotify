@@ -122,8 +122,19 @@
     
     [engine addHook: JSON
       forRepository: [owner stringByAppendingFormat:@"/%@", repo]
-            success: ^(id obj) {
-               
+            success: ^(NSArray *obj) {
+                int hookId = [[[obj objectAtIndex:0] objectForKey:@"id"] intValue];
+                
+                //Test hook
+                [engine testHook:hookId
+                   forRepository:[owner stringByAppendingFormat:@"/%@", repo]
+                         success:^(BOOL obj) {
+                             
+                         }
+                         failure:^(NSError *err) {
+                             //Print error
+                             NSLog(@"Error: %@", [err description]);
+                         }];
                 
             } failure: ^(NSError *err) {                
                 //Print error
