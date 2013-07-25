@@ -1098,7 +1098,7 @@
 
 - (void)repositoriesForUser:(NSString *)aUser includeWatched:(BOOL)watched success:(UAGithubEngineSuccessBlock)successBlock failure:(UAGithubEngineFailureBlock)failureBlock
 {
-	[self repositoriesForUser:aUser includeWatched:watched page:1 success:successBlock failure:failureBlock];	
+	[self invoke:^(id self){[self sendRequest:[NSString stringWithFormat:@"users/%@/subscriptions", aUser] requestType:UAGithubRepositoriesRequest responseType:UAGithubRepositoriesResponse error:nil];} success:successBlock failure:failureBlock];
 }
 
 #pragma mark TODO watched repos?

@@ -44,11 +44,19 @@
     [self update];
     
     //Do updates every few seconds
-    [NSTimer scheduledTimerWithTimeInterval:60
+    [NSTimer scheduledTimerWithTimeInterval:10
                             target:self
-                          selector:@selector(update)
+                          selector:@selector(asyncupdate)
                           userInfo:nil
                            repeats:YES];
+}
+
+/* Method asyncupdate
+ * ------------------------------
+ * Asynchronous update
+ */
+-(void)asyncupdate {
+    [self performSelectorInBackground:@selector(update) withObject:nil];
 }
 
 /* Method update
