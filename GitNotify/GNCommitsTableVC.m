@@ -175,6 +175,8 @@
     GNCommitsTableHeader *headerView = [[[NSBundle mainBundle] loadNibNamed:@"GNCommitsTableHeader"
                                                                    owner:self
                                                                  options:nil] lastObject];
+    
+    //Set some outlets
     headerView.delegate = self;
     headerView.titleLabel.text = [NSString stringWithFormat:@"%@", self.repoName];
     [headerView sizeToFit];
