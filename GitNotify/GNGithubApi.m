@@ -127,6 +127,7 @@
                 
                 //Test hook
                 [engine testHook:hookId
+                 
                    forRepository:[owner stringByAppendingFormat:@"/%@", repo]
                          success:^(BOOL obj) {
                              

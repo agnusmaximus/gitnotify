@@ -31,6 +31,19 @@
     return self;
 }
 
+/* Method reversedArray
+ * ------------------------
+ * REturns reversed array
+ */
+-(NSMutableArray *)reversedArray:(NSMutableArray *)array {
+    NSMutableArray *results = [NSMutableArray array];
+    NSEnumerator *enumerator = [array reverseObjectEnumerator];
+    for (id element in enumerator) {
+        [results addObject:element];
+    }
+    return results;
+}
+
 /* Method setRepoId
  * ---------------------------
  * Sets repository id from which
@@ -44,13 +57,13 @@
     //Pull commits into array
     self.commits = [[GNDatabaseAPI sharedAPI] getCommits:repoId];
     
+    self.commits = [self reversedArray:self.commits];
+    
     //Assign commits
     self.commitsVC.commits = (NSArray *)self.commits;
     
     //Reload data
     [self.commitsVC.tableView reloadData];
-    
-    [self.commitsVC.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
 }
 
 /* Method setRepoName
