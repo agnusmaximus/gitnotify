@@ -135,4 +135,44 @@
     return object;
 }
 
+/* Method getUnseenRepos
+ * -----------------------
+ * Returns unseen repositories
+ * of user with given user id
+ *
+ * @uid - user's id
+ @ @return - dictionary representing
+ *           all repos not seen
+ */
+-(NSDictionary *)getUnseenRepos:(NSString *)uid {
+    //Create url
+    NSString *url = GET_UNSEENREPOS_URL;
+    NSString *data = [NSString stringWithFormat:GET_UNSEENREPOS_FORMAT, uid];
+    
+    //Execute data
+    NSString *repos = [self.net postRequest:url withData:data];
+    
+    //Parse string data
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *object = [parser objectWithString:repos];
+    
+    return object;
+}
+
+/* Method setSeenREpo
+ * -----------------------
+ * Sets repository to seen
+ *
+ * @uid - user id 
+ * @repoid - repoid
+ */
+-(void)setSeenRepo:(NSString *)uid and:(NSString *)repoID {
+    //Create url
+    NSString *url = SET_UNSEENREPOS_URL;
+    NSString *data = [NSString stringWithFormat:SET_UNSEENREPOS_FORMAT, uid, repoID];
+    
+    //Execute data
+   [self.net postRequest:url withData:data];
+}
+
 @end

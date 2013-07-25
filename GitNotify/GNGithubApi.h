@@ -18,6 +18,8 @@
     NSString *uname;
 }
 
+@property (nonatomic) int uid;
+
 +(GNGithubApi *)sharedGitAPI;
 
 -(BOOL)login:(NSString *)username andPass:(NSString *)password;

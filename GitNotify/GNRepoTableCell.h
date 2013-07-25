@@ -11,5 +11,6 @@
 @interface GNRepoTableCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *repoName;
+@property (nonatomic, strong) IBOutlet UILabel *unseen;
 
 @end

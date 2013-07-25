@@ -21,5 +21,7 @@
 -(void)createRepos:(NSDictionary *)repos;
 -(void)createRelations:(NSString *)uid withRepos:(NSDictionary *)repos;
 -(NSDictionary *)getCommits:(NSString *)repoId;
+-(NSDictionary *)getUnseenRepos:(NSString *)uid;
+-(void)setSeenRepo:(NSString *)uid and:(NSString *)repoID;
 
 @end

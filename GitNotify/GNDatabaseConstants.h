@@ -15,6 +15,8 @@
 #define CREATE_REPOS_URL @"http://42c3a868.ngrok.com/createrepos"
 #define CREATE_RELATIONS_URL @"http://42c3a868.ngrok.com/createrelations"
 #define GET_COMMITS_URL @"http://42c3a868.ngrok.com/getcommits"
+#define GET_UNSEENREPOS_URL @"http://42c3a868.ngrok.com/getunseenrepos"
+#define SET_UNSEENREPOS_URL @"http://42c3a868.ngrok.com/setunseenrepos"
 
 //Different methods for the database
 #define CREATE_USER_FORMAT @"name=%@&id=%@"
@@ -22,5 +24,7 @@
 #define CREATE_REPOS_FORMAT @"repos=%@"
 #define CREATE_RELATIONS_FORMAT @"id=%@&repos=%@"
 #define GET_COMMITS_FORMAT @"repoid=%@"
+#define GET_UNSEENREPOS_FORMAT @"id=%@"
+#define SET_UNSEENREPOS_FORMAT @"uid=%@&repoId=%@"
 
 #endif

@@ -95,7 +95,9 @@
  * @return - NSDictionary representing user
  */
 -(void)getUserWithDelegate:(id)delegate andSelector:(SEL)sel {
-    [engine userWithSuccess:^(NSDictionary *user) {
+    [engine userWithSuccess:^(NSArray *user) {
+        
+        self.uid = [[[user objectAtIndex:0] objectForKey:@"id"] intValue];
         
         //Call callback method
         if ([delegate respondsToSelector:sel]) {

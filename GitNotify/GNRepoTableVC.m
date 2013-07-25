@@ -99,8 +99,8 @@
     
     
     //Extract repository names and ids
-    self.repoNames = [NSMutableArray array];
-    self.repoIds = [NSMutableArray array];
+    NSMutableArray *repNames = [NSMutableArray array];
+    NSMutableArray *repIds = [NSMutableArray array];
     
     for (NSDictionary *dict in self.watched) {
         
@@ -109,12 +109,21 @@
         name = [name stringByAppendingFormat:@"/%@", [dict objectForKey:@"name"]];
         
         //Add to the list
-        [self.repoNames addObject:name];
+        [repNames addObject:name];
         
         //Get id
         NSString *repo_id = [dict objectForKey:@"id"];
-        [self.repoIds addObject:repo_id];
+        [repIds addObject:repo_id];
     }
+    
+    self.repoNames = repNames;
+    self.repoIds = repIds;
+    
+    //Get unseen repositories
+    self.unseenRepoIds = (NSMutableArray *)[[GNDatabaseAPI sharedAPI]
+                                            getUnseenRepos:[NSString stringWithFormat:@"%d", [GNGithubApi sharedGitAPI].uid]];
+    if ([self.unseenRepoIds count] > 0)
+        self.unseenRepoIds = [self.unseenRepoIds objectAtIndex:0];
     
     //Reload data
     [self.tableView reloadData];
@@ -164,6 +173,28 @@
     //If cell is not found, create a new one
     if (cell == nil) {
         cell = [[GNRepoTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    //Current repo id
+    NSString *repoId = [self.repoIds objectAtIndex:indexPath.row];
+    BOOL seen = YES;
+    
+    //Check if repo is unseen
+    for (NSString *rid in self.unseenRepoIds) {
+        if ([rid compare:repoId] == 0) {
+            //this repo is unseen
+            seen = NO;
+            break;
+        }
+    }
+    
+    //If repo is unseen, set notification icon to
+    //not hidden
+    if (seen) {
+        cell.unseen.hidden = YES;
+    }
+    else {
+        cell.unseen.hidden = NO;
     }
     
     //Set repo name
@@ -239,7 +270,12 @@
     GNCommitsVC *commitsVC = [[GNCommitsVC alloc] initWithNibName:@"GNCommitsVC" bundle:nil];
     [commitsVC setRepoId:repo_id];
     [commitsVC setRepoName:repo_name];
-        
+    
+    //Set this repo to seen
+    [[GNDatabaseAPI sharedAPI] setSeenRepo:
+     [NSString stringWithFormat:@"%d", [GNGithubApi sharedGitAPI].uid]
+                                       and:repo_id];
+    
     //Transition to commits vc
     [self.delegate.navigationController pushViewController:commitsVC animated:YES];
 }
