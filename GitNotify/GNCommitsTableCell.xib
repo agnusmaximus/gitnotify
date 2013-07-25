@@ -82,7 +82,7 @@
 							<object class="IBUILabel" id="120228117">
 								<reference key="NSNextResponder" ref="605940522"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{208, 6}, {100, 25}}</string>
+								<string key="NSFrame">{{208, 0}, {100, 25}}</string>
 								<reference key="NSSuperview" ref="605940522"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -98,8 +98,8 @@
 								</object>
 								<reference key="IBUIHighlightedColor" ref="872029852"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<bool key="IBUIAdjustsLetterSpacingToFitWidth">YES</bool>
 								<int key="IBUINumberOfLines">0</int>
+								<int key="IBUITextAlignment">2</int>
 								<int key="IBUILineBreakMode">0</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<string key="name">Avenir-Medium</string>

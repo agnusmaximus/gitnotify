@@ -79,6 +79,44 @@
     return expectedLabelSize.height + 60;
 }
 
+/* Method timeSinceDate
+ * -------------------------
+ * Returns time since date
+ *
+ * @date - date from which to calculate
+ *         time passsed
+ * @return - string representing time since
+ *           date
+ */
+-(NSString *)timeSinceDate:(NSDate *)date {
+    //Time in seconds since date
+    int seconds = -(int)[date timeIntervalSinceNow];
+    
+    //Result string
+    NSString *result = @"";
+    
+    NSLog(@"%d", seconds);
+    
+    //Show in days
+    if (seconds / 86400 > 0) {
+        result = [NSString stringWithFormat:@"%d days ago", seconds/86400];
+    }
+    //Show in hours
+    else if (seconds / 3600 > 0) {
+        result = [NSString stringWithFormat:@"%d hours ago", seconds/3600];
+    }
+    //Show in minutes
+    else if (seconds / 60 > 0) {
+        result = [NSString stringWithFormat:@"%d minutes ago", seconds/60];
+    }
+    //Show in seconds
+    else {
+        result = [NSString stringWithFormat:@"%d seconds ago", seconds];
+    }
+    
+    return result;
+}
+
 /* Method cellForRowAtIndexPath
  * ------------------------------------
  * Customizes repository cell at given
@@ -121,11 +159,7 @@
     NSDate *date = [formatter dateFromString:dateString];
         
     //Create date string
-    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm at"];
-    dateString = [dateFormatter stringFromDate:date];
-   
-    cell.dateLabel.text = dateString;
+    cell.dateLabel.text = [self timeSinceDate:date];
     
     //No selection
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
