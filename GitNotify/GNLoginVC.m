@@ -49,12 +49,27 @@
         //Login
         [self.delegate login:self.login.text andPassword:self.password.text];
         [self.delegate transitionToRepositories];
+        
+        //Save data
+        [[NSUserDefaults standardUserDefaults] setObject:self.login.text forKey:@"uname"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.password.text forKey:@"pword"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Set text field to password field
     self.password.secureTextEntry = YES;
+    
+    //check if logged in
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"uname"] != nil &&
+        [[NSUserDefaults standardUserDefaults] stringForKey:@"pword"] != nil) {
+        self.login.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"uname"];
+        self.password.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"pword"];
+        [self performLogin:nil];
+    }
 }
 
 -(void)didReceiveMemoryWarning {
