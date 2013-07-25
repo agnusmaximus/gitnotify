@@ -278,6 +278,9 @@
     
     //Transition to commits vc
     [self.delegate.navigationController pushViewController:commitsVC animated:YES];
+    
+    //Refresh self
+    [self asyncupdate];
 }
 
 @end

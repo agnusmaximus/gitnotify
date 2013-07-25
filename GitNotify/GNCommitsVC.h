@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *repositoryId;
 @property (nonatomic, strong) NSDictionary *commits;
 @property (nonatomic, strong) GNCommitsTableVC *commitsVC;
+@property (nonatomic, strong) NSTimer *updateTimer;
 
 -(void)setRepoId:(NSString *)repoId;
 -(void)setRepoName:(NSString *)repoName;

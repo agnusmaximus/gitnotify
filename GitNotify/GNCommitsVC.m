@@ -27,8 +27,26 @@
         self.commitsVC = [[GNCommitsTableVC alloc] initWithNibName:@"GNCommitsTableVC" bundle:nil];
         self.commitsVC.delegate = self;
         [self.view addSubview:self.commitsVC.view];
+        
+        //Set update interval
+        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:10
+                                                       target:self
+                                                     selector:@selector(update)
+                                                     userInfo:nil
+                                                      repeats:YES];
     }
     return self;
+}
+
+/* Method upate
+ * ----------------
+ * updates the table view
+ * controller to reflect
+ * changes
+ */
+-(void)update {
+    NSLog(@"upating %@", self.repositoryId);
+    [self setRepoId:self.repositoryId];
 }
 
 /* Method reversedArray

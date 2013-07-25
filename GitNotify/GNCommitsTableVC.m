@@ -207,6 +207,7 @@
  */
 -(void)back {
     [self.delegate.navigationController popViewControllerAnimated:YES];
+    [self.delegate.updateTimer invalidate];
 }
 
 #pragma mark - Table view delegate
