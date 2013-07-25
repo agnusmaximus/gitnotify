@@ -54,6 +54,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.password.secureTextEntry = YES;
 }
 
 -(void)didReceiveMemoryWarning {

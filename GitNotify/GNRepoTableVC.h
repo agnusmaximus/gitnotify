@@ -24,4 +24,6 @@
 @property (nonatomic, strong) NSMutableArray *repoIds;
 @property (nonatomic, weak) GNRepoVC *delegate;
 
+-(void)back;
+
 @end

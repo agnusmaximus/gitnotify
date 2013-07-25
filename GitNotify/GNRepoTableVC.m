@@ -190,6 +190,7 @@
     GNRepoTableHeader *headerView = [[[NSBundle mainBundle] loadNibNamed:@"GNRepoTableHeader"
                                                                   owner:self
                                                                 options:nil] lastObject];
+    headerView.delegate = self;
     
     //Set quartzcore layer properties
     headerView.layer.borderColor = [[UIColor colorWithRed:.8 green:.8 blue:.8 alpha:1] CGColor];    
@@ -209,6 +210,14 @@
     [headerView.layer insertSublayer:gradient atIndex:0];
     
     return headerView;
+}
+
+/* Method back
+ * -------------------------
+ * pops view controller
+ */
+-(void)back {
+    [self.delegate.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view delegate

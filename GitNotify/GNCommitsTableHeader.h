@@ -13,7 +13,7 @@
 
 @interface GNCommitsTableHeader : UIView
 
-@property (nonatomic, strong) GNCommitsTableVC *delegate;
+@property (nonatomic, weak) GNCommitsTableVC *delegate;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 
 -(IBAction)back:(id)sender;
