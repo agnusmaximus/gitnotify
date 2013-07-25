@@ -40,71 +40,47 @@
     return self;
 }
 
+/* Method login
+ * -------------------------
+ * Logs in
+ */
+-(void)login:(NSString *)username andPass:(NSString *)password {
+    engine = [[UAGithubEngine alloc] initWithUsername:username
+                                             password:password
+                                     withReachability:YES];
+    uname = username;
+}
+
+/* Method getUserRepos
+ * -------------------------------
+ * Returns users' repositories
+ */
+-(void)getUserReposWithDelegate:(id)delegate andSelector:(SEL)sel {
+    [self getUserRepos:uname withDelegate:delegate andSelector:sel];
+}
+
 /* Method getUserRepos
  * ----------------------------
  * Uses github api to retrieve
  * a mutable array of user's repositories
  *
  * @username - username of github member
- * @return - array of user's repos
+ * @delegate - responder to repository data
+ * @sel - selector of responder to call
  */
--(NSDictionary *)getUserRepos:(NSString *)username {
-    
-    //Create the url
-    NSString *head = BASE_URL;
-    NSString *partialUrl = [NSString stringWithFormat:LIST_REPO_FORMAT, username];
-    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubApi.getUserRepos: %@", url);
-    }
-    
-    //MAke network request
-    NSString *data = [net getRequest:url];
-   
-    //Parse json string
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    NSDictionary *json = [parser objectWithString:data];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getUserRepos: %@", json);
-    }
-    
-    return json;
+-(void)getUserRepos:(NSString *)username withDelegate:(id)delegate andSelector:(SEL)sel {
+    //Request watched repos
+    [engine repositoriesForUser:username includeWatched:YES success:^(NSDictionary *repos) {
+        //Perform selector on repositories
+        if ([delegate respondsToSelector:sel])
+            [delegate performSelector:sel withObject:repos];
+        
+    } failure:^(NSError *error) {
+        //Print error
+        NSLog(@"Error: %@", [error description]);
+    }];
 }
 
-/* Method getWatchedRepos
- * ----------------------------
- * Uses github api to retrieve
- * a mutable array of user's repositories
- *
- * @username - username of github member
- * @return - array of user's repos
- */
--(NSDictionary *)getWatchedRepos:(NSString *)username {
-    
-    //Create the url
-    NSString *head = BASE_URL;
-    NSString *partialUrl = [NSString stringWithFormat:LIST_WATCHED_REPO_FORMAT, username];
-    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getWatchedRepos: %@", url);
-    }
-        
-    //MAke network request
-    NSString *data = [net getRequest:url];
-    
-    //Parse json string
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    NSDictionary *json = [parser objectWithString:data];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getWatchedRepos: %@", json);
-    }
-    
-    return json;
-}
 
 /* Method getUser
  * --------------------------
@@ -113,29 +89,17 @@
  * @username - user to get
  * @return - NSDictionary representing user
  */
--(NSDictionary *)getUser:(NSString *)username {
-    //Create url
-    NSString *head = BASE_URL;
-    NSString *partialUrl = [NSString stringWithFormat:GET_USER_FORMAT, username];
-    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getUser: %@", url);
-    }
-    
-    //Make network request
-    NSString *data = [net getRequest:url];
-    
-    //Parse json string
-    
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    NSDictionary *json = [parser objectWithString:data];
-    
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getUser: %@", json);
-    }
-    
-    return json;
+-(void)getUserWithDelegate:(id)delegate andSelector:(SEL)sel {
+    [engine userWithSuccess:^(NSDictionary *user) {
+        
+        //Call callback method
+        if ([delegate respondsToSelector:sel])
+            [delegate performSelector:sel withObject:user];
+        
+    } failure:^(NSError *err) {
+        //Print error
+        NSLog(@"Error: %@", [err description]);        
+    }];
 }
 
 /* Method createHook
@@ -148,17 +112,22 @@
  * @repo - repository name
  */
 -(void)createHook:(NSString *)owner andRepo:(NSString *)repo {
-    //Create url
-    NSString *head = BASE_URL;
-    NSString *partialUrl = [NSString stringWithFormat:CREATE_HOOK_FORMAT, owner, repo];
-    NSString *url = [[head stringByAppendingString:partialUrl] stringByAppendingString:ACCESS_TOKEN];
     
-    if (DEBUG_TEST) {
-        NSLog(@"GNGithubAPI.getHook: %@", url);
-    }
+    //Create json data
+    NSDictionary *JSON =
+    [NSJSONSerialization JSONObjectWithData:[CREATE_HOOK_DATA dataUsingEncoding:NSUTF8StringEncoding]
+                                    options: NSJSONReadingMutableContainers
+                                      error: nil];
     
-    //Make network request
-    [net postRequest:url withData:CREATE_HOOK_DATA];
+    [engine addHook: JSON
+      forRepository: [owner stringByAppendingFormat:@"/%@", repo]
+            success: ^(id obj) {
+               
+                
+            } failure: ^(NSError *err) {                
+                //Print error
+                NSLog(@"Error: %@", [err description]);
+            }];
 }
 
 @end

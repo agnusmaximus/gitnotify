@@ -40,25 +40,34 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"GNRepoTableCell" bundle:nil]
          forCellReuseIdentifier:@"Cell"];
     
-    //Refresh data
-    [self refreshData];
+    //Update
+    [self update];
     
     //Do updates every few seconds
-    [NSTimer scheduledTimerWithTimeInterval:10
+    [NSTimer scheduledTimerWithTimeInterval:60
                             target:self
-                          selector:@selector(refreshData)
+                          selector:@selector(update)
                           userInfo:nil
                            repeats:YES];
+}
+
+/* Method update
+ * ----------------------------
+ * Updates table data
+ */
+-(void)update {
+
+    //Refresh data
+    [[GNGithubApi sharedGitAPI] getUserReposWithDelegate:self
+                                 andSelector:@selector(refreshRepoData:)];
 }
 
 /* Method refresh
  * -------------------------
  * Refreshes table view
  */
--(void)refreshData {
-    //Load data
-    self.watched = (NSMutableArray *)[[GNGithubApi sharedGitAPI]
-                                      getWatchedRepos:@"agnusmaximus"];
+-(void)refreshRepoData:(NSArray *)repos {
+    self.watched = (NSMutableArray *)repos;
     
     //Sort in updated order
     [self.watched sortUsingComparator:

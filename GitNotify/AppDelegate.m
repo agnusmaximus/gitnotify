@@ -12,6 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Login
+
+    
     //Set up UI
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -27,11 +30,20 @@
     //Set window's root view controller to the navigation controller
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
-
-    //Update database
-    [self performSelectorInBackground:@selector(updateDatabase) withObject:nil];
+    
+    //Update
+    [self performSelectorInBackground:@selector(update) withObject:nil];
     
     return YES;
+}
+
+/* Method updateDatabase
+ * ----------------------------
+ * Updates the database
+ */
+-(void)update {
+    //Update database
+    [[GNGithubApi sharedGitAPI] getUserWithDelegate:self andSelector:@selector(updateDatabase:)];
 }
 
 /* Method updateDatabase
@@ -40,27 +52,43 @@
  * repo info, and relationships
  * between the two.
  */
--(void)updateDatabase {
-    //Get user information from github
-    NSDictionary *user = [[GNGithubApi sharedGitAPI] getUser:@"agnusmaximus"];
+-(void)updateDatabase:(NSArray *)userArray {
+    
+    //Extract user
+    NSDictionary *user = [userArray objectAtIndex:0];
+    
+    //Set user information
+    self.user = user;
     
     //Create a user on the database
     [[GNDatabaseAPI sharedAPI] createUser:[user objectForKey:@"login"]
                                     andId:[user objectForKey:@"id"]];
     
+    
     //Get repository information from github
-    NSDictionary *repos = [[GNGithubApi sharedGitAPI] getUserRepos:@"agnusmaximus"];
+    [[GNGithubApi sharedGitAPI] getUserReposWithDelegate:self
+                                 andSelector:@selector(createRepos:)];
+}
+
+/* Method createRepos
+ * -----------------------------------
+ * Creates repositories on the backend
+ */
+-(void)createRepos:(NSDictionary *)repos {
+        
+    //Create repos in backend
     [[GNDatabaseAPI sharedAPI] createRepos:repos];
     
     //Tie user with repositories
-    [[GNDatabaseAPI sharedAPI] createRelations:[user objectForKey:@"id"] withRepos:repos];
+    [[GNDatabaseAPI sharedAPI] createRelations:[self.user objectForKey:@"id"] withRepos:repos];
     
     //Create hooks for every repo
     for (NSDictionary *repo in repos) {
         NSString *owner = [[repo objectForKey:@"owner"] objectForKey:@"login"];
         NSString *name = [repo objectForKey:@"name"];
-        
-        [[GNGithubApi sharedGitAPI] createHook:owner andRepo:name];
+    
+        //Create repo hook
+        [[GNGithubApi sharedGitAPI] createHook:owner andRepo:name];        
     }
 }
 

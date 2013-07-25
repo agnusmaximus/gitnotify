@@ -70,6 +70,17 @@
 		AFBBE1E0179E4CE30095B957 /* GNRepoTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */; };
 		AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
 		AFBBE1E3179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
+		AFFBCAAF17A07766005A9525 /* NSArray+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9B17A07766005A9525 /* NSArray+Utilities.m */; };
+		AFFBCAB017A07766005A9525 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9D17A07766005A9525 /* NSData+Base64.m */; };
+		AFFBCAB117A07766005A9525 /* NSInvocation+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9F17A07766005A9525 /* NSInvocation+Blocks.m */; };
+		AFFBCAB217A07766005A9525 /* NSString+UAGithubEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAA117A07766005A9525 /* NSString+UAGithubEngineUtilities.m */; };
+		AFFBCAB317A07766005A9525 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAA317A07766005A9525 /* NSString+UUID.m */; };
+		AFFBCAB417A07766005A9525 /* UAGithubEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAA517A07766005A9525 /* UAGithubEngine.m */; };
+		AFFBCAB517A07766005A9525 /* UAGithubEngineConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAA717A07766005A9525 /* UAGithubEngineConstants.m */; };
+		AFFBCAB617A07766005A9525 /* UAGithubJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAAA17A07766005A9525 /* UAGithubJSONParser.m */; };
+		AFFBCAB717A07766005A9525 /* UAGithubURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAAC17A07766005A9525 /* UAGithubURLConnection.m */; };
+		AFFBCAB817A07766005A9525 /* UAReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCAAE17A07766005A9525 /* UAReachability.m */; };
+		AFFBCABA17A078DD005A9525 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +169,28 @@
 		AFBBE1DD179E4CE30095B957 /* GNRepoTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableHeader.h; sourceTree = "<group>"; };
 		AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableHeader.m; sourceTree = "<group>"; };
 		AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableHeader.xib; sourceTree = "<group>"; };
+		AFFBCA9A17A07766005A9525 /* NSArray+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utilities.h"; sourceTree = "<group>"; };
+		AFFBCA9B17A07766005A9525 /* NSArray+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utilities.m"; sourceTree = "<group>"; };
+		AFFBCA9C17A07766005A9525 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		AFFBCA9D17A07766005A9525 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		AFFBCA9E17A07766005A9525 /* NSInvocation+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Blocks.h"; sourceTree = "<group>"; };
+		AFFBCA9F17A07766005A9525 /* NSInvocation+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Blocks.m"; sourceTree = "<group>"; };
+		AFFBCAA017A07766005A9525 /* NSString+UAGithubEngineUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UAGithubEngineUtilities.h"; sourceTree = "<group>"; };
+		AFFBCAA117A07766005A9525 /* NSString+UAGithubEngineUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UAGithubEngineUtilities.m"; sourceTree = "<group>"; };
+		AFFBCAA217A07766005A9525 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		AFFBCAA317A07766005A9525 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
+		AFFBCAA417A07766005A9525 /* UAGithubEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubEngine.h; sourceTree = "<group>"; };
+		AFFBCAA517A07766005A9525 /* UAGithubEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGithubEngine.m; sourceTree = "<group>"; };
+		AFFBCAA617A07766005A9525 /* UAGithubEngineConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubEngineConstants.h; sourceTree = "<group>"; };
+		AFFBCAA717A07766005A9525 /* UAGithubEngineConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGithubEngineConstants.m; sourceTree = "<group>"; };
+		AFFBCAA817A07766005A9525 /* UAGithubEngineRequestTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubEngineRequestTypes.h; sourceTree = "<group>"; };
+		AFFBCAA917A07766005A9525 /* UAGithubJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubJSONParser.h; sourceTree = "<group>"; };
+		AFFBCAAA17A07766005A9525 /* UAGithubJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGithubJSONParser.m; sourceTree = "<group>"; };
+		AFFBCAAB17A07766005A9525 /* UAGithubURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAGithubURLConnection.h; sourceTree = "<group>"; };
+		AFFBCAAC17A07766005A9525 /* UAGithubURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAGithubURLConnection.m; sourceTree = "<group>"; };
+		AFFBCAAD17A07766005A9525 /* UAReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAReachability.h; sourceTree = "<group>"; };
+		AFFBCAAE17A07766005A9525 /* UAReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAReachability.m; sourceTree = "<group>"; };
+		AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFBCABA17A078DD005A9525 /* SystemConfiguration.framework in Frameworks */,
 				AF47CEFA179FA1A5003EF79C /* QuartzCore.framework in Frameworks */,
 				AFBBE158179E31E40095B957 /* UIKit.framework in Frameworks */,
 				AFBBE15A179E31E40095B957 /* Foundation.framework in Frameworks */,
@@ -207,6 +241,7 @@
 		AFBBE14B179E31E40095B957 = {
 			isa = PBXGroup;
 			children = (
+				AFFBCAB917A078DD005A9525 /* SystemConfiguration.framework */,
 				AF47CEF9179FA1A4003EF79C /* QuartzCore.framework */,
 				AFBBE15D179E31E40095B957 /* GitNotify */,
 				AFBBE17B179E31E50095B957 /* GitNotifyTests */,
@@ -287,6 +322,7 @@
 		AFBBE18C179E36A80095B957 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFFBCA9817A07636005A9525 /* GitEngine */,
 				AFBBE191179E38060095B957 /* GNNetworkCalls.h */,
 				AFBBE192179E38060095B957 /* GNNetworkCalls.m */,
 				AFBBE190179E36ED0095B957 /* GNAPIConstants.h */,
@@ -344,6 +380,34 @@
 				AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */,
 			);
 			name = GNRepo;
+			sourceTree = "<group>";
+		};
+		AFFBCA9817A07636005A9525 /* GitEngine */ = {
+			isa = PBXGroup;
+			children = (
+				AFFBCA9A17A07766005A9525 /* NSArray+Utilities.h */,
+				AFFBCA9B17A07766005A9525 /* NSArray+Utilities.m */,
+				AFFBCA9C17A07766005A9525 /* NSData+Base64.h */,
+				AFFBCA9D17A07766005A9525 /* NSData+Base64.m */,
+				AFFBCA9E17A07766005A9525 /* NSInvocation+Blocks.h */,
+				AFFBCA9F17A07766005A9525 /* NSInvocation+Blocks.m */,
+				AFFBCAA017A07766005A9525 /* NSString+UAGithubEngineUtilities.h */,
+				AFFBCAA117A07766005A9525 /* NSString+UAGithubEngineUtilities.m */,
+				AFFBCAA217A07766005A9525 /* NSString+UUID.h */,
+				AFFBCAA317A07766005A9525 /* NSString+UUID.m */,
+				AFFBCAA417A07766005A9525 /* UAGithubEngine.h */,
+				AFFBCAA517A07766005A9525 /* UAGithubEngine.m */,
+				AFFBCAA617A07766005A9525 /* UAGithubEngineConstants.h */,
+				AFFBCAA717A07766005A9525 /* UAGithubEngineConstants.m */,
+				AFFBCAA817A07766005A9525 /* UAGithubEngineRequestTypes.h */,
+				AFFBCAA917A07766005A9525 /* UAGithubJSONParser.h */,
+				AFFBCAAA17A07766005A9525 /* UAGithubJSONParser.m */,
+				AFFBCAAB17A07766005A9525 /* UAGithubURLConnection.h */,
+				AFFBCAAC17A07766005A9525 /* UAGithubURLConnection.m */,
+				AFFBCAAD17A07766005A9525 /* UAReachability.h */,
+				AFFBCAAE17A07766005A9525 /* UAReachability.m */,
+			);
+			name = GitEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +555,16 @@
 				AF47CEFE179FB7B2003EF79C /* GNCommitsTableVC.m in Sources */,
 				AF47CF02179FBA86003EF79C /* GNCommitsTableHeader.m in Sources */,
 				AF47CF0E17A02ADA003EF79C /* GNCommitsTableCell.m in Sources */,
+				AFFBCAAF17A07766005A9525 /* NSArray+Utilities.m in Sources */,
+				AFFBCAB017A07766005A9525 /* NSData+Base64.m in Sources */,
+				AFFBCAB117A07766005A9525 /* NSInvocation+Blocks.m in Sources */,
+				AFFBCAB217A07766005A9525 /* NSString+UAGithubEngineUtilities.m in Sources */,
+				AFFBCAB317A07766005A9525 /* NSString+UUID.m in Sources */,
+				AFFBCAB417A07766005A9525 /* UAGithubEngine.m in Sources */,
+				AFFBCAB517A07766005A9525 /* UAGithubEngineConstants.m in Sources */,
+				AFFBCAB617A07766005A9525 /* UAGithubJSONParser.m in Sources */,
+				AFFBCAB717A07766005A9525 /* UAGithubURLConnection.m in Sources */,
+				AFFBCAB817A07766005A9525 /* UAReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

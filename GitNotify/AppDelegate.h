@@ -16,7 +16,9 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSDictionary *user;
 
--(void)updateDatabase;
+-(void)update;
+-(void)updateDatabase:(NSArray *)userArray;
 
 @end
