@@ -67,6 +67,7 @@
 		AFBBE1E0179E4CE30095B957 /* GNRepoTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */; };
 		AFBBE1E2179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
 		AFBBE1E3179E4CF10095B957 /* GNRepoTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */; };
+		AFF01F7B17A2476F00AB0BAD /* sync.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF01F7A17A2476E00AB0BAD /* sync.png */; };
 		AFFBCAAF17A07766005A9525 /* NSArray+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9B17A07766005A9525 /* NSArray+Utilities.m */; };
 		AFFBCAB017A07766005A9525 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9D17A07766005A9525 /* NSData+Base64.m */; };
 		AFFBCAB117A07766005A9525 /* NSInvocation+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBCA9F17A07766005A9525 /* NSInvocation+Blocks.m */; };
@@ -164,6 +165,7 @@
 		AFBBE1DD179E4CE30095B957 /* GNRepoTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNRepoTableHeader.h; sourceTree = "<group>"; };
 		AFBBE1DE179E4CE30095B957 /* GNRepoTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNRepoTableHeader.m; sourceTree = "<group>"; };
 		AFBBE1E1179E4CF10095B957 /* GNRepoTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNRepoTableHeader.xib; sourceTree = "<group>"; };
+		AFF01F7A17A2476E00AB0BAD /* sync.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync.png; sourceTree = "<group>"; };
 		AFFBCA9A17A07766005A9525 /* NSArray+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utilities.h"; sourceTree = "<group>"; };
 		AFFBCA9B17A07766005A9525 /* NSArray+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utilities.m"; sourceTree = "<group>"; };
 		AFFBCA9C17A07766005A9525 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		AFBBE15E179E31E40095B957 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFF01F7A17A2476E00AB0BAD /* sync.png */,
 				AFFBCAC317A0FDB7005A9525 /* home.png */,
 				AF47CF05179FBC2E003EF79C /* back.png */,
 				AFBBE15F179E31E40095B957 /* GitNotify-Info.plist */,
@@ -485,6 +488,7 @@
 				AF47CF1017A02AE7003EF79C /* GNCommitsTableCell.xib in Resources */,
 				AFFBCAC017A0EF49005A9525 /* GNLoginVC.xib in Resources */,
 				AFFBCAC417A0FDB7005A9525 /* home.png in Resources */,
+				AFF01F7B17A2476F00AB0BAD /* sync.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

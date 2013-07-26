@@ -109,6 +109,8 @@
         //Create repo hook
         [[GNGithubApi sharedGitAPI] createHook:owner andRepo:name];        
     }
+    
+    [repoVC.tableVC update];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

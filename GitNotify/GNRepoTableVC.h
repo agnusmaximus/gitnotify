@@ -26,6 +26,7 @@
 @property (nonatomic, strong) NSMutableArray *unseenRepoIds;
 @property (nonatomic, weak) GNRepoVC *delegate;
 
+-(void)update;
 -(void)back;
 
 @end
