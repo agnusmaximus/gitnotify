@@ -208,8 +208,8 @@
     BOOL seen = YES;
     
     //Check if repo is unseen
-    for (NSString *rid in self.unseenRepoIds) {
-        if ([rid compare:repoId] == 0) {
+    for (NSNumber *rid in self.unseenRepoIds) {
+        if ([[rid stringValue] isEqualToString:repoId] != 0) {
             //this repo is unseen
             seen = NO;
             break;
@@ -228,11 +228,11 @@
     //If repo is not hooked, grey it out
     if (![self isHooked:repoId]) {
         cell.cover.hidden = NO;
-        cell.userInteractionEnabled = YES;
+        cell.userInteractionEnabled = NO;
     }
     else {
         cell.cover.hidden = YES;
-        cell.userInteractionEnabled = NO;
+        cell.userInteractionEnabled = YES;
     }
     
     //Set repo name
