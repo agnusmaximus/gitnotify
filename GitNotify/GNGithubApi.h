@@ -11,13 +11,14 @@
 #import "GNNetworkCalls.h"
 #import "GNAPIConstants.h"
 #import "SBJson.h"
+#import "GNDatabaseAPI.h"
 
 @interface GNGithubApi : NSObject {
     GNNetworkCalls *net;
     UAGithubEngine *engine;
-    NSString *uname;
 }
 
+@property (nonatomic, strong) NSString *uname;
 @property (nonatomic) int uid;
 
 +(GNGithubApi *)sharedGitAPI;

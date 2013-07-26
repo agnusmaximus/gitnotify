@@ -175,4 +175,38 @@
    [self.net postRequest:url withData:data];
 }
 
+/* MEthod setHooked
+ * ---------------------
+ * Sets repository to hooked
+ */
+-(void)setHooked:(NSString *)reponame {
+    //Create url
+    NSString *url = SET_HOOKED_URL;
+    NSString *data = [NSString stringWithFormat:SET_HOOKED_FORMAT, reponame];
+    
+    //Execute data
+    [self.net postRequest:url withData:data];
+}
+
+/* MEthod getRepos
+ * -----------------------
+ * Gets all repositories of a user
+ *
+ * @uid - id of user's repositories
+ */
+-(NSDictionary *)getRepos:(NSString *)uid {
+    //Construct url and data
+    NSString *url = GET_REPOS_URL;
+    NSString *data = [NSString stringWithFormat:GET_REPOS_FORMAT, uid];
+    
+    //Execute data
+    NSString *repos = [self.net postRequest:url withData:data];
+    
+    //Parse string data
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *object = [parser objectWithString:repos];
+    
+    return object;
+}
+
 @end

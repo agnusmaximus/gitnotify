@@ -48,7 +48,7 @@
     engine = [[UAGithubEngine alloc] initWithUsername:username
                                              password:password
                                      withReachability:YES];
-    uname = username;
+    self.uname = username;
     return [engine isReachable];
 }
 
@@ -57,7 +57,7 @@
  * Returns users' repositories
  */
 -(void)getUserReposWithDelegate:(id)delegate andSelector:(SEL)sel {
-    [self getUserRepos:uname withDelegate:delegate andSelector:sel];
+    [self getUserRepos:self.uname withDelegate:delegate andSelector:sel];
 }
 
 /* Method getUserRepos
@@ -82,7 +82,7 @@
         
     } failure:^(NSError *error) {
         //Print error
-        NSLog(@"Error: %@", [error description]);
+        if (DEBUG_TEST) NSLog(@"Error: %@", [error description]);
     }];
 }
 
@@ -110,7 +110,7 @@
         
     } failure:^(NSError *err) {
         //Print error
-        NSLog(@"Error: %@", [err description]);        
+        if (DEBUG_TEST) NSLog(@"Error: %@", [err description]);        
     }];
 }
 
@@ -134,22 +134,19 @@
     [engine addHook: JSON
       forRepository: [owner stringByAppendingFormat:@"/%@", repo]
             success: ^(NSArray *obj) {
-                int hookId = [[[obj objectAtIndex:0] objectForKey:@"id"] intValue];
                 
-                //Test hook
-                [engine testHook:hookId                 
-                   forRepository:[owner stringByAppendingFormat:@"/%@", repo]
-                         success:^(BOOL obj) {
-                             
-                         }
-                         failure:^(NSError *err) {
-                             //Print error
-                             NSLog(@"Error: %@", [err description]);
-                         }];
+                //Add repo to hooked
+                [[GNDatabaseAPI sharedAPI] setHooked:repo];
                 
             } failure: ^(NSError *err) {                
                 //Print error
-                NSLog(@"Error: %@", [err description]);
+                if (DEBUG_TEST) NSLog(@"Error: %@", [err description]);
+                
+                //Repo already hooked
+                if ([err code] == 422) {
+                    //Add repo to hooked
+                    [[GNDatabaseAPI sharedAPI] setHooked:repo];
+                }
             }];
 }
 

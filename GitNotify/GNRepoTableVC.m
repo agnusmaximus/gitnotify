@@ -70,16 +70,44 @@
                                  andSelector:@selector(refreshRepoData:)];
 }
 
+/* Method isHooked
+ * -----------------------
+ * Returns whether repository
+ * is hooked or not
+ */
+-(BOOL)isHooked:(NSString *)repoId {
+    for (NSMutableArray *repo in self.repos) {
+        NSString *rid = [[repo objectAtIndex:0] stringValue];
+        if ([repoId isEqualToString:rid]) {
+            if ([[repo objectAtIndex:2] intValue] == 1) return YES;
+            return NO;
+        }
+    }
+    return NO;
+}
+
 /* Method refresh
  * -------------------------
  * Refreshes table view
  */
 -(void)refreshRepoData:(NSArray *)repos {
     self.watched = (NSMutableArray *)repos;
+    self.repos = (NSMutableArray *)[[GNDatabaseAPI sharedAPI] getRepos:
+                                    [NSString stringWithFormat:@"%d",
+                                     [GNGithubApi sharedGitAPI].uid]];
     
     //Sort in updated order
     [self.watched sortUsingComparator:
      ^NSComparisonResult(NSDictionary *obj1, NSDictionary *obj2) {
+         
+         //Check if either are hooked
+         NSString *id1, *id2;
+         id1 = [[obj1 objectForKey:@"id"] stringValue];
+         id2 = [[obj2 objectForKey:@"id"] stringValue];
+         
+         if (![self isHooked:id1]) return NSOrderedAscending;
+         if (![self isHooked:id2]) return NSOrderedDescending;
+         
          //Get time stamps
          NSString *timestamp1, *timestamp2;
          timestamp1 = [obj1 objectForKey:@"updated_at"];
@@ -176,7 +204,7 @@
     }
     
     //Current repo id
-    NSString *repoId = [self.repoIds objectAtIndex:indexPath.row];
+    NSString *repoId = [[self.repoIds objectAtIndex:indexPath.row] stringValue];
     BOOL seen = YES;
     
     //Check if repo is unseen
@@ -195,6 +223,16 @@
     }
     else {
         cell.unseen.hidden = NO;
+    }
+    
+    //If repo is not hooked, grey it out
+    if (![self isHooked:repoId]) {
+        cell.cover.hidden = NO;
+        cell.userInteractionEnabled = YES;
+    }
+    else {
+        cell.cover.hidden = YES;
+        cell.userInteractionEnabled = NO;
     }
     
     //Set repo name

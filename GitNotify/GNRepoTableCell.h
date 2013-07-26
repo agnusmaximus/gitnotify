@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *repoName;
 @property (nonatomic, strong) IBOutlet UILabel *unseen;
+@property (nonatomic, strong) IBOutlet UIView *cover;
 
 @end
