@@ -21,6 +21,6 @@
 #define GET_USER_FORMAT @"users/%@"
 #define CREATE_HOOK_FORMAT @"repos/%@/%@/hooks"
 
-#define CREATE_HOOK_DATA @"{\"name\": \"web\",\"active\": true,\"events\": [\"push\"],\"config\": {\"url\": \"http://42c3a868.ngrok.com\"}}"
+#define CREATE_HOOK_DATA @"{\"name\": \"web\",\"active\": true,\"events\": [\"push\"],\"config\": {\"url\": \"http://766fd748.ngrok.com\"}}"
 
 #endif
