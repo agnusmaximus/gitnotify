@@ -10,15 +10,15 @@
 #define GitNotify_GNDatabaseConstants_h
 
 //Database URL
-#define CREATE_USER_URL @"http://766fd748.ngrok.com/createuser"
-#define CREATE_REPO_URL @"http://766fd748.ngrok.com/createrepo"
-#define CREATE_REPOS_URL @"http://766fd748.ngrok.com/createrepos"
-#define CREATE_RELATIONS_URL @"http://766fd748.ngrok.com/createrelations"
-#define GET_COMMITS_URL @"http://766fd748.ngrok.com/getcommits"
-#define GET_UNSEENREPOS_URL @"http://766fd748.ngrok.com/getunseenrepos"
-#define SET_UNSEENREPOS_URL @"http://766fd748.ngrok.com/setunseenrepos"
-#define SET_HOOKED_URL @"http://766fd748.ngrok.com/sethooked"
-#define GET_REPOS_URL @"http://766fd748.ngrok.com/getrepos"
+#define CREATE_USER_URL @"http://gitnotify.ngrok.com/createuser"
+#define CREATE_REPO_URL @"http://gitnotify.ngrok.com/createrepo"
+#define CREATE_REPOS_URL @"http://gitnotify.ngrok.com/createrepos"
+#define CREATE_RELATIONS_URL @"http://gitnotify.ngrok.com/createrelations"
+#define GET_COMMITS_URL @"http://gitnotify.ngrok.com/getcommits"
+#define GET_UNSEENREPOS_URL @"http://gitnotify.ngrok.com/getunseenrepos"
+#define SET_UNSEENREPOS_URL @"http://gitnotify.ngrok.com/setunseenrepos"
+#define SET_HOOKED_URL @"http://gitnotify.ngrok.com/sethooked"
+#define GET_REPOS_URL @"http://gitnotify.ngrok.com/getrepos"
 
 //Different methods for the database
 #define CREATE_USER_FORMAT @"name=%@&id=%@"
