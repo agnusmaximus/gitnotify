@@ -117,7 +117,7 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC44OTAxOTYwNzg0IDAuODk0MTE3NjQ3MSAwLjkxMzcyNTQ5MDIAA</bytes>
+					<bytes key="NSRGB">MC44OTAxOTYwNzg0IDAuODk0MTE3NjQ3MSAwLjkxMzcyNTQ5MDIgMAA</bytes>
 				</object>
 				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>

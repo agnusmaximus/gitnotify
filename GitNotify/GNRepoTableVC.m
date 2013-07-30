@@ -274,8 +274,10 @@
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = headerView.bounds;
     gradient.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor colorWithRed:.93 green:.93 blue:.93 alpha:1] CGColor],
-                       (id)[[UIColor colorWithRed:.95 green:.95 blue:.95 alpha:1] CGColor], nil];
+                       (id)[[UIColor colorWithRed:1 green:1 blue:1 alpha:1] CGColor],
+                       (id)[[UIColor colorWithRed:1 green:1 blue:1 alpha:0] CGColor], nil];
+    gradient.startPoint = CGPointMake(0.0f, 0.0f);
+    gradient.endPoint = CGPointMake(0.0f, 4.0f);
     [headerView.layer insertSublayer:gradient atIndex:0];
     
     return headerView;
