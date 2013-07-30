@@ -44,7 +44,7 @@
     [self update];
     
     //Do updates every few seconds
-    [NSTimer scheduledTimerWithTimeInterval:10
+    [NSTimer scheduledTimerWithTimeInterval:60
                             target:self
                           selector:@selector(asyncupdate)
                           userInfo:nil

@@ -29,7 +29,7 @@
         [self.view addSubview:self.commitsVC.view];
         
         //Set update interval
-        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:10
+        self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:60
                                                        target:self
                                                      selector:@selector(update)
                                                      userInfo:nil
